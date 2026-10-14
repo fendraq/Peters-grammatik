@@ -1,9 +1,18 @@
 {
   "files": [
-    "test_ovning.json",
     "pronouns_de_dem_det.json",
     "nouns_en_ett.json",
     "word_order_subordinate_clause.json",
-    "writing_rules_punctuation.json"
+    "writing_rules_punctuation.json",
+    "pronouns_reflexive_possessive.json",
+    "nouns_definite_plural.json",
+    "adjectives_in_phrase.json",
+    "adjectives_predicative.json",
+    "verbs_infinitive.json",
+    "verbs_tense.json",
+    "word_order_inversion.json",
+    "writing_rules_compound_words.json",
+    "writing_rules_spelling.json",
+    "writing_rules_connectors.json"
   ]
 }

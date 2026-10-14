@@ -1,0 +1,35 @@
+{
+  "title": "Omkastning: verbet på plats 2 (steg 4)",
+  "area": "Ordföljd",
+  "rules": [
+    "I en huvudsats står verbet alltid på plats 2.",
+    "Börjar meningen med subjektet står subjektet på plats 1: Jag går hem idag.",
+    "Börjar meningen med något annat (idag, sedan, därför, dessutom, tyvärr) kommer verbet före subjektet: Idag går jag hem. (inte Idag jag går hem)",
+    "En inledande bisats räknas som plats 1. Då kommer verbet direkt efter bisatsen: När det regnar, stannar vi hemma. Om man behöver pengar, kan man ringa hem.",
+    "Frågor med frågeord börjar också med verbet efter frågeordet: Vad gör du på rasten?",
+    "Tips: Räkna platserna. Plats 1 = början, plats 2 = verbet, plats 3 = subjektet.",
+    "Obs: Och, men och eller räknas inte som plats 1: Men jag vill gå hem."
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "Idag ____ (gå) vi hem tidigt.", "answers": ["går"] },
+    { "type": "gap-fill", "text": "Igår ____ (ha) vi ett prov.", "answers": ["hade"] },
+    { "type": "gap-fill", "text": "Därför ____ (tycka) jag att läxor är dåliga.", "answers": ["tycker"] },
+    { "type": "gap-fill", "text": "Dessutom ____ (kunna) mobilen vara ett hjälpmedel.", "answers": ["kan"] },
+    { "type": "gap-fill", "text": "Efter lektionen ____ (gå) eleverna ut.", "answers": ["går"] },
+    { "type": "gap-fill", "text": "Först ____ (komma) rasten, sedan lektionen.", "answers": ["kommer"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Idag jag går hem.", "Idag går jag hem."], "answers": ["Idag går jag hem."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Därför vi vill ha mobilerna.", "Därför vill vi ha mobilerna."], "answers": ["Därför vill vi ha mobilerna."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Om man behöver pengar, kan man ringa sina föräldrar.", "Om man behöver pengar, man kan ringa sina föräldrar."], "answers": ["Om man behöver pengar, kan man ringa sina föräldrar."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["När man är själv, har man inget att göra.", "När man är själv, man har inget att göra."], "answers": ["När man är själv, har man inget att göra."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Dessutom eleverna kan hålla koll på tiden.", "Dessutom kan eleverna hålla koll på tiden."], "answers": ["Dessutom kan eleverna hålla koll på tiden."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Eftersom det regnar, vi stannar inne.", "Eftersom det regnar, stannar vi inne."], "answers": ["Eftersom det regnar, stannar vi inne."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Ibland känner jag mig ensam.", "Ibland jag känner mig ensam."], "answers": ["Ibland känner jag mig ensam."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Vad gör du på rasten?", "Vad du gör på rasten?"], "answers": ["Vad gör du på rasten?"] },
+    { "type": "context-answer", "context": "Imorgon vi har prov.", "question": "Skriv meningen rätt.", "answers": ["Imorgon har vi prov.", "Imorgon har vi prov", "I morgon har vi prov.", "I morgon har vi prov"] },
+    { "type": "context-answer", "context": "Sedan jag gick hem.", "question": "Skriv meningen rätt.", "answers": ["Sedan gick jag hem.", "Sedan gick jag hem"] },
+    { "type": "context-answer", "context": "Om eleverna får ha mobil, de blir gladare.", "question": "Skriv meningen rätt.", "answers": ["Om eleverna får ha mobil, blir de gladare.", "Om eleverna får ha mobil, blir de gladare", "Om eleverna får ha mobil blir de gladare.", "Om eleverna får ha mobil blir de gladare"] },
+    { "type": "context-answer", "context": "När provet är slut, vi går ut.", "question": "Skriv meningen rätt.", "answers": ["När provet är slut, går vi ut.", "När provet är slut, går vi ut", "När provet är slut går vi ut.", "När provet är slut går vi ut"] },
+    { "type": "context-answer", "context": "Tyvärr jag kan inte komma.", "question": "Skriv meningen rätt.", "answers": ["Tyvärr kan jag inte komma.", "Tyvärr kan jag inte komma"] },
+    { "type": "context-answer", "context": "Därför eleverna är trötta.", "question": "Skriv meningen rätt.", "answers": ["Därför är eleverna trötta.", "Därför är eleverna trötta"] }
+  ]
+}

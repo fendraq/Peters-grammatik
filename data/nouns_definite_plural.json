@@ -1,0 +1,34 @@
+{
+  "title": "Bestämd form och plural (steg 2–3)",
+  "area": "Substantiv",
+  "rules": [
+    "Bestämd form singular: en-ord får -en eller -n (en bil → bilen, en skola → skolan). Ett-ord får -et eller -t (ett hus → huset, ett äpple → äpplet).",
+    "Plural har fem vanliga former: -or (en läxa → läxor), -ar (en timme → timmar), -er (en telefon → telefoner), -n (ett äpple → äpplen) och ingen ändelse (ett problem → problem, ett betyg → betyg).",
+    "Efter ett adjektiv eller ett ord som många, alla och fyra används plural utan -en: bra betyg (inte bra betygen).",
+    "Några ord är oregelbundna: en bok → böcker, ett barn → barn.",
+    "Tips: Är du osäker? Slå upp ordet i en ordbok. Där står både plural och bestämd form.",
+    "Efter det, den och de används bestämd form: det stödet, den läxan. Ett-ord: ett stöd → det stödet."
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "Vi har en läxa i matte. Jag gör ____ ikväll.", "answers": ["läxan"] },
+    { "type": "gap-fill", "text": "Eleverna får ett stöd. De behöver ____ för att klara skolan.", "answers": ["stödet"] },
+    { "type": "gap-fill", "text": "Jag har ett prov i morgon. Jag pluggar inför ____.", "answers": ["provet"] },
+    { "type": "gap-fill", "text": "Det är en rast nu. Vi går ut på ____.", "answers": ["rasten"] },
+    { "type": "gap-fill", "text": "Eleven har en mobil. Hon glömde ____ hemma.", "answers": ["mobilen"] },
+    { "type": "gap-fill", "text": "Vi bor i ett samhälle med mycket teknik. Vi tycker om ____.", "answers": ["samhället"] },
+    { "type": "gap-fill", "text": "Skriv plural: en läxa → många ____.", "answers": ["läxor"] },
+    { "type": "gap-fill", "text": "Skriv plural: en telefon → många ____.", "answers": ["telefoner"] },
+    { "type": "gap-fill", "text": "Skriv plural: ett problem → många ____.", "answers": ["problem"] },
+    { "type": "gap-fill", "text": "Skriv plural: en elev → många ____.", "answers": ["elever"] },
+    { "type": "gap-fill", "text": "Skriv plural: en lektion → fyra ____.", "answers": ["lektioner"] },
+    { "type": "gap-fill", "text": "Skriv plural: ett betyg → bra ____.", "answers": ["betyg"] },
+    { "type": "gap-fill", "text": "Skriv plural: en timme → sju ____.", "answers": ["timmar"] },
+    { "type": "multiple-choice", "question": "Vilken är plural av ett barn?", "options": ["barn", "barnen", "barner"], "answers": ["barn"] },
+    { "type": "multiple-choice", "question": "Vilken är bestämd form av ett äpple?", "options": ["äpplet", "äpplen", "äppleet"], "answers": ["äpplet"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Jag fick bra betygen i alla ämnen.", "Jag fick bra betyg i alla ämnen."], "answers": ["Jag fick bra betyg i alla ämnen."] },
+    { "type": "multiple-choice", "question": "Vilken är plural av en bok?", "options": ["boker", "böcker", "bokar"], "answers": ["böcker"] },
+    { "type": "context-answer", "context": "Eleverna har många läxer.", "question": "Skriv meningen rätt.", "answers": ["Eleverna har många läxor.", "Eleverna har många läxor"] },
+    { "type": "context-answer", "context": "Jag fick den stöden av läraren.", "question": "Skriv meningen rätt.", "answers": ["Jag fick det stödet av läraren.", "Jag fick det stödet av läraren"] },
+    { "type": "context-answer", "context": "Hon har fyra lektion på måndagen.", "question": "Skriv meningen rätt.", "answers": ["Hon har fyra lektioner på måndagen.", "Hon har fyra lektioner på måndagen"] }
+  ]
+}

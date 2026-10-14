@@ -1,0 +1,33 @@
+{
+  "title": "sin, sitt, sina, deras och sig (steg 2–3)",
+  "area": "Pronomen",
+  "rules": [
+    "Sin, sitt och sina används när något tillhör subjektet (den som gör något) i samma mening: Eleven tar sin mobil.",
+    "Formen beror på ordet som ägs: sin + en-ord (sin mobil), sitt + ett-ord (sitt skåp), sina + flera (sina telefoner).",
+    "Hans, hennes och deras används när något tillhör någon annan än subjektet: Läraren ger eleverna deras mobiler.",
+    "Tips: Är det subjektet som äger saken? Då skriver du sin, sitt eller sina. Eleverna tar sina mobiler.",
+    "Efter han, hon, de och eleven används sig, inte dig eller mig: Eleven känner sig trygg."
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "Eleven lämnar in ____ mobil på morgonen.", "answers": ["sin"] },
+    { "type": "gap-fill", "text": "Varje elev har ____ eget skåp.", "answers": ["sitt"] },
+    { "type": "gap-fill", "text": "Eleverna tar med ____ telefoner till rasten.", "answers": ["sina"] },
+    { "type": "gap-fill", "text": "Pappan oroar sig för ____ barns säkerhet.", "answers": ["sitt"] },
+    { "type": "gap-fill", "text": "Hon blir stolt över ____ resultat.", "answers": ["sitt"] },
+    { "type": "gap-fill", "text": "Eleven känner ____ trygg i klassen.", "answers": ["sig"] },
+    { "type": "gap-fill", "text": "Barnen vill ha ____ mobiler tillbaka.", "answers": ["sina"] },
+    { "type": "gap-fill", "text": "Läraren ger eleverna ____ prov.", "answers": ["deras"] },
+    { "type": "gap-fill", "text": "Föräldrarna ringer ____ barn när de är oroliga.", "answers": ["sina"] },
+    { "type": "gap-fill", "text": "Eleven har tappat ____ penna.", "answers": ["sin"] },
+    { "type": "multiple-choice", "question": "Eleverna tar ____ mobiler när lektionen är slut.", "options": ["sin", "sitt", "sina", "deras"], "answers": ["sina"] },
+    { "type": "multiple-choice", "question": "Läraren ger eleverna ____ mobiler tillbaka efter lektionen.", "options": ["sina", "deras"], "answers": ["deras"] },
+    { "type": "multiple-choice", "question": "Hon säger att hon har glömt ____ mobil hemma.", "options": ["sin", "sitt"], "answers": ["sin"] },
+    { "type": "multiple-choice", "question": "Pojken tycker om ____ klass.", "options": ["sin", "sitt", "sina"], "answers": ["sin"] },
+    { "type": "multiple-choice", "question": "Eleven känner ____ utanför på rasten.", "options": ["sig", "dig", "mig"], "answers": ["sig"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Flickan lämnar in hennes uppsats.", "Flickan lämnar in sin uppsats."], "answers": ["Flickan lämnar in sin uppsats."] },
+    { "type": "context-answer", "context": "Eleverna lämnar in deras mobiler.", "question": "Skriv meningen rätt.", "answers": ["Eleverna lämnar in sina mobiler.", "Eleverna lämnar in sina mobiler"] },
+    { "type": "context-answer", "context": "Pappan älskar sin barn.", "question": "Skriv meningen rätt.", "answers": ["Pappan älskar sitt barn.", "Pappan älskar sitt barn", "Pappan älskar sina barn.", "Pappan älskar sina barn"] },
+    { "type": "context-answer", "context": "Eleven känner dig utanför.", "question": "Skriv meningen rätt.", "answers": ["Eleven känner sig utanför.", "Eleven känner sig utanför"] },
+    { "type": "context-answer", "context": "Hon oroar sig för sin barns skola.", "question": "Skriv meningen rätt.", "answers": ["Hon oroar sig för sitt barns skola.", "Hon oroar sig för sitt barns skola", "Hon oroar sig för sina barns skola.", "Hon oroar sig för sina barns skola"] }
+  ]
+}

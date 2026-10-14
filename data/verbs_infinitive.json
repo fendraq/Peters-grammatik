@@ -1,0 +1,34 @@
+{
+  "title": "Infinitiv efter kan, ska, vill och måste (steg 2)",
+  "area": "Verb",
+  "rules": [
+    "Efter kan, kunde, ska, skulle, vill, ville, måste, borde, får, fick och brukar står verbet i infinitiv (grundform): Jag kan komma.",
+    "Infinitiv slutar oftast på -a: tänka, använda, hjälpa. Några verb är korta: bli, ge, se, ha, ta, gå, bo.",
+    "Använd inte presens eller preteritum efter kan och ska: Eleverna kan använda mobilen (inte använder eller använde).",
+    "Infinitiv används också efter att: Det är viktigt att tänka på andra.",
+    "Imperativ (uppmaning) är något annat: Förbjud! Men infinitiv är: Sluta förbjuda.",
+    "Tips: Ordet att passar framför infinitiv: att använda, att bli, att vara. Passar inte att? Då är det fel form."
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "Alla elever måste ____ (tänker) på säkerheten.", "answers": ["tänka"] },
+    { "type": "gap-fill", "text": "Mobilen kan ____ (blir) ett bra hjälpmedel.", "answers": ["bli"] },
+    { "type": "gap-fill", "text": "De vill ____ (är) med sina vänner.", "answers": ["vara"] },
+    { "type": "gap-fill", "text": "Hon kunde inte ____ (använder) telefonen på lektionen.", "answers": ["använda"] },
+    { "type": "gap-fill", "text": "Skolan får inte ____ (förbjuder) mobiler utan skäl.", "answers": ["förbjuda"] },
+    { "type": "gap-fill", "text": "Eleverna ska ____ (lämnar) in mobilerna.", "answers": ["lämna"] },
+    { "type": "gap-fill", "text": "Läraren brukar ____ (hjälper) eleverna.", "answers": ["hjälpa"] },
+    { "type": "gap-fill", "text": "Man får inte ____ (filmar) andra utan lov.", "answers": ["filma"] },
+    { "type": "gap-fill", "text": "Vi vill ____ (ringer) våra föräldrar.", "answers": ["ringa"] },
+    { "type": "gap-fill", "text": "Det kan ____ (händer) något i skolan.", "answers": ["hända"] },
+    { "type": "gap-fill", "text": "Många elever vill ____ (gör) sitt bästa.", "answers": ["göra"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Eleverna kan blir stressade.", "Eleverna kan bli stressade."], "answers": ["Eleverna kan bli stressade."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Han ville skrev ett brev.", "Han ville skriva ett brev."], "answers": ["Han ville skriva ett brev."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Du kan tar mobilen med dig.", "Du kan ta mobilen med dig."], "answers": ["Du kan ta mobilen med dig."] },
+    { "type": "multiple-choice", "question": "Skolan borde ____ mer tid för vila.", "options": ["ger", "ge", "gett"], "answers": ["ge"] },
+    { "type": "multiple-choice", "question": "Det är viktigt att ____ på sin hälsa.", "options": ["tänker", "tänka", "tänkte"], "answers": ["tänka"] },
+    { "type": "context-answer", "context": "Eleverna kan inte använde mobilen.", "question": "Skriv meningen rätt.", "answers": ["Eleverna kan inte använda mobilen.", "Eleverna kan inte använda mobilen"] },
+    { "type": "context-answer", "context": "Sluta förbjud mobilerna.", "question": "Skriv meningen rätt.", "answers": ["Sluta förbjuda mobilerna.", "Sluta förbjuda mobilerna"] },
+    { "type": "context-answer", "context": "Man måste tänke på andra.", "question": "Skriv meningen rätt.", "answers": ["Man måste tänka på andra.", "Man måste tänka på andra"] },
+    { "type": "context-answer", "context": "Hon vill va med sina vänner.", "question": "Skriv meningen rätt.", "answers": ["Hon vill vara med sina vänner.", "Hon vill vara med sina vänner"] }
+  ]
+}

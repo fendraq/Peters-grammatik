@@ -1,0 +1,34 @@
+{
+  "title": "Adjektiv efter verbet (steg 4)",
+  "area": "Adjektiv",
+  "rules": [
+    "Adjektiv efter är, blir, känns, verkar och känner sig passar ordet de beskriver.",
+    "En-ord: Mobilen är viktig. Ett-ord: Problemet är stort (adjektivet får -t). Flera: Läxorna är svåra (adjektivet får -a).",
+    "Efter känner sig gäller samma regel: Eleven känner sig trygg. Eleverna känner sig trygga.",
+    "Adjektiv som slutar på -ad får -ade i plural: stressad → stressade, uttråkad → uttråkade.",
+    "Adjektivet bra ändras inte: Mobilen är bra. Mobilerna är bra.",
+    "Tips: Fråga dig vem eller vad adjektivet beskriver. Är det en person eller flera? En-ord eller ett-ord?"
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "Mobilen är ____ (viktig) för många elever.", "answers": ["viktig"] },
+    { "type": "gap-fill", "text": "Provet är ____ (svår).", "answers": ["svårt"] },
+    { "type": "gap-fill", "text": "Eleverna känner sig ____ (trött).", "answers": ["trötta"] },
+    { "type": "gap-fill", "text": "Eleven känner sig ____ (trygg) i klassen.", "answers": ["trygg"] },
+    { "type": "gap-fill", "text": "Läxorna är ____ (svår).", "answers": ["svåra"] },
+    { "type": "gap-fill", "text": "Skolan blir ____ (tråkig) utan kompisar.", "answers": ["tråkig"] },
+    { "type": "gap-fill", "text": "Barnen blir ____ (uttråkad) på rasten.", "answers": ["uttråkade"] },
+    { "type": "gap-fill", "text": "Eleverna är ____ (stressad) före provet.", "answers": ["stressade"] },
+    { "type": "gap-fill", "text": "Klassrummet är ____ (stor).", "answers": ["stort"] },
+    { "type": "gap-fill", "text": "Reglerna verkar ____ (orättvis).", "answers": ["orättvisa"] },
+    { "type": "gap-fill", "text": "Elever som blir filmade blir ____ (kränkt).", "answers": ["kränkta"] },
+    { "type": "multiple-choice", "question": "Elever som blir filmade kan känna sig ____.", "options": ["kränkt", "kränkta", "kränkte"], "answers": ["kränkta"] },
+    { "type": "multiple-choice", "question": "Skolan är en plats där alla ska känna sig ____.", "options": ["trygg", "tryggt", "trygga"], "answers": ["trygga"] },
+    { "type": "multiple-choice", "question": "Det nya huset är ____.", "options": ["stor", "stort", "stora"], "answers": ["stort"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Läxorna är jobbigt.", "Läxorna är jobbiga."], "answers": ["Läxorna är jobbiga."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Eleven känner sig ensamma.", "Eleven känner sig ensam."], "answers": ["Eleven känner sig ensam."] },
+    { "type": "context-answer", "context": "Eleverna känner sig ensam på rasten.", "question": "Skriv meningen rätt.", "answers": ["Eleverna känner sig ensamma på rasten.", "Eleverna känner sig ensamma på rasten"] },
+    { "type": "context-answer", "context": "Problemet är stor.", "question": "Skriv meningen rätt.", "answers": ["Problemet är stort.", "Problemet är stort"] },
+    { "type": "context-answer", "context": "Barnen är uttråkad.", "question": "Skriv meningen rätt.", "answers": ["Barnen är uttråkade.", "Barnen är uttråkade"] },
+    { "type": "context-answer", "context": "Mobilerna är viktigt för eleverna.", "question": "Skriv meningen rätt.", "answers": ["Mobilerna är viktiga för eleverna.", "Mobilerna är viktiga för eleverna"] }
+  ]
+}

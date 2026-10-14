@@ -164,7 +164,7 @@ main h2 {
 .tasks > li > div input[type="text"] {
     display: block;
     width: 100%;
-    max-width: 24rem;
+    max-width: 40rem;
     margin: 0.5rem 0 0;
 }
 

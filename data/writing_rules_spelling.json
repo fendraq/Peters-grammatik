@@ -1,0 +1,33 @@
+{
+  "title": "Vanliga stavfel",
+  "area": "Skrivregler",
+  "rules": [
+    "Vissa ord blir ofta fel. Lär dig dem: speciellt, dessutom, beställa, precis, otroligt, undervisning, viktigt, fokusera, försenad.",
+    "Efter en kort vokal skriver man ofta dubbel konsonant: speciellt, dessutom, beställa, tillåta.",
+    "Dela upp ordet i stavelser och läs högt: be-stäl-la, un-der-vis-ning, ot-ro-ligt.",
+    "Använd stavningskontrollen i datorn eller mobilen och slå upp ord i en ordlista. Men kontrollera alltid själv också.",
+    "Tips: Skriv upp de ord du ofta stavar fel och öva på dem."
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "Rätta stavningen: specielt → ____", "answers": ["speciellt"] },
+    { "type": "gap-fill", "text": "Rätta stavningen: desutom → ____", "answers": ["dessutom"] },
+    { "type": "gap-fill", "text": "Rätta stavningen: betälla → ____", "answers": ["beställa"] },
+    { "type": "gap-fill", "text": "Rätta stavningen: presis → ____", "answers": ["precis"] },
+    { "type": "gap-fill", "text": "Rätta stavningen: ortoligt → ____", "answers": ["otroligt"] },
+    { "type": "gap-fill", "text": "Rätta stavningen: undervissning → ____", "answers": ["undervisning"] },
+    { "type": "multiple-choice", "question": "Vilket ord är rätt stavat?", "options": ["vilktigt", "viktigt", "viktikt"], "answers": ["viktigt"] },
+    { "type": "multiple-choice", "question": "Bussen var ____.", "options": ["försänd", "försenad", "försennad"], "answers": ["försenad"] },
+    { "type": "multiple-choice", "question": "Vilket ord är rätt stavat?", "options": ["slössar", "slösar", "slossar"], "answers": ["slösar"] },
+    { "type": "multiple-choice", "question": "Vilket ord är rätt stavat?", "options": ["fukusera", "fokusera", "fokussera"], "answers": ["fokusera"] },
+    { "type": "multiple-choice", "question": "Vilket ord är rätt stavat?", "options": ["stressig", "streesig", "stresig"], "answers": ["stressig"] },
+    { "type": "multiple-choice", "question": "Vilket ord är rätt stavat?", "options": ["vardag", "verjedag", "vardah"], "answers": ["vardag"] },
+    { "type": "multiple-choice", "question": "Vilket ord är rätt stavat?", "options": ["angånde", "angående", "angåendes"], "answers": ["angående"] },
+    { "type": "multiple-choice", "question": "Vilket ord är rätt stavat?", "options": ["tillåta", "till låta", "tilåta"], "answers": ["tillåta"] },
+    { "type": "context-answer", "context": "Det är specielt svårt att fokusera efter skolan.", "question": "Skriv meningen rätt.", "answers": ["Det är speciellt svårt att fokusera efter skolan.", "Det är speciellt svårt att fokusera efter skolan"] },
+    { "type": "context-answer", "context": "Desutom blir eleverna trötta.", "question": "Skriv meningen rätt.", "answers": ["Dessutom blir eleverna trötta.", "Dessutom blir eleverna trötta"] },
+    { "type": "context-answer", "context": "Jag vill betälla mat i skolan.", "question": "Skriv meningen rätt.", "answers": ["Jag vill beställa mat i skolan.", "Jag vill beställa mat i skolan"] },
+    { "type": "context-answer", "context": "Det är ortoligt viktigt med sömn.", "question": "Skriv meningen rätt.", "answers": ["Det är otroligt viktigt med sömn.", "Det är otroligt viktigt med sömn"] },
+    { "type": "context-answer", "context": "Presis då ringde klockan.", "question": "Skriv meningen rätt.", "answers": ["Precis då ringde klockan.", "Precis då ringde klockan"] },
+    { "type": "context-answer", "context": "Läraren har bra undervissning.", "question": "Skriv meningen rätt.", "answers": ["Läraren har bra undervisning.", "Läraren har bra undervisning"] }
+  ]
+}

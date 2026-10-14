@@ -1,0 +1,35 @@
+{
+  "title": "Bindeord i debattext",
+  "area": "Skrivregler",
+  "rules": [
+    "I en debattartikel hjälper bindeord läsaren att följa dina argument: För det första, För det andra, För det tredje, Till sist, Sammanfattningsvis.",
+    "Skriv För det första (inte För de första) och Till sist (inte Tillsist).",
+    "Använd eftersom och inte eftersom att: Jag är trött eftersom jag har läxor.",
+    "På grund av + substantiv: på grund av regnet. På grund av att + mening: på grund av att det regnar.",
+    "Använd men för motargument: Många tycker att läxor är bra, men jag tycker att de tar för mycket tid.",
+    "Dessutom lägger till ett argument. Därför visar en följd.",
+    "Tips: Läs din text och fråga dig: Vilket bindeord visar hur den här meningen hänger ihop med meningen före?"
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "____ det första kan mobiler vara ett hjälpmedel.", "answers": ["för"] },
+    { "type": "gap-fill", "text": "För det ____ tycker jag att läxor stjäl fritid.", "answers": ["andra"] },
+    { "type": "gap-fill", "text": "Till ____ vill jag säga att betyg inte är allt.", "answers": ["sist"] },
+    { "type": "gap-fill", "text": "____ tycker jag att mobiler borde tillåtas. (Skriv ett bindeord för slutet av texten.)", "answers": ["sammanfattningsvis", "avslutningsvis", "slutligen"] },
+    { "type": "gap-fill", "text": "Eleverna är trötta ____ de har många läxor.", "answers": ["eftersom", "för att"] },
+    { "type": "gap-fill", "text": "Vi har många läxor. ____ är eleverna trötta.", "answers": ["därför"] },
+    { "type": "gap-fill", "text": "Mobiler kan hjälpa elever. ____ kan de hålla koll på tiden.", "answers": ["dessutom"] },
+    { "type": "gap-fill", "text": "Många tycker att betyg är viktiga. ____ jag tycker att de skapar stress.", "answers": ["men"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["För de första behövs mobilen.", "För det första behövs mobilen."], "answers": ["För det första behövs mobilen."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Tillsist vill jag säga något.", "Till sist vill jag säga något."], "answers": ["Till sist vill jag säga något."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Jag är trött eftersom att jag sov dåligt.", "Jag är trött eftersom jag sov dåligt."], "answers": ["Jag är trött eftersom jag sov dåligt."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Rasten blev inne på grund av att det regnade.", "Rasten blev inne på grund av det regnade."], "answers": ["Rasten blev inne på grund av att det regnade."] },
+    { "type": "multiple-choice", "question": "Eleverna är trötta ____ de sover för lite.", "options": ["eftersom", "men", "så"], "answers": ["eftersom"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Å ena sidan är mobilen bra, å andra sidan kan den störa.", "Å ena sidan är mobilen bra, å andra sidan den kan störa."], "answers": ["Å ena sidan är mobilen bra, å andra sidan kan den störa."] },
+    { "type": "multiple-choice", "question": "Vilket ord passar bäst i början av sista stycket?", "options": ["För det första", "Sammanfattningsvis", "Dessutom"], "answers": ["Sammanfattningsvis"] },
+    { "type": "context-answer", "context": "För de första kan mobilen vara ett hjälpmedel.", "question": "Skriv meningen rätt.", "answers": ["För det första kan mobilen vara ett hjälpmedel.", "För det första kan mobilen vara ett hjälpmedel"] },
+    { "type": "context-answer", "context": "Tillsist vill jag säga att betyg inte är allt.", "question": "Skriv meningen rätt.", "answers": ["Till sist vill jag säga att betyg inte är allt.", "Till sist vill jag säga att betyg inte är allt"] },
+    { "type": "context-answer", "context": "Jag är trött eftersom att jag har läxor.", "question": "Skriv meningen rätt.", "answers": ["Jag är trött eftersom jag har läxor.", "Jag är trött eftersom jag har läxor"] },
+    { "type": "context-answer", "context": "Vi stannade inne på grund av det regnade.", "question": "Skriv meningen rätt.", "answers": ["Vi stannade inne på grund av att det regnade.", "Vi stannade inne på grund av att det regnade"] },
+    { "type": "context-answer", "context": "För de andra behöver eleverna vila.", "question": "Skriv meningen rätt.", "answers": ["För det andra behöver eleverna vila.", "För det andra behöver eleverna vila"] }
+  ]
+}

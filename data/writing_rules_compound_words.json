@@ -1,0 +1,34 @@
+{
+  "title": "Ihopskrivning och särskrivning",
+  "area": "Skrivregler",
+  "rules": [
+    "Sammansatta ord skrivs ihop i svenska: mobiltelefon, skoldag, bordtennis.",
+    "Jätte- skrivs ihop med nästa ord: jättestor, jättebra, jättetrött, jättemycket.",
+    "Vissa små ord skrivs ihop: eftersom (inte efter som), tillbaka (inte tillbacka), utanför, därför, också.",
+    "Några uttryck skrivs isär: till sist, på grund av, hela tiden, till exempel, och så vidare.",
+    "Särskrivning är ett vanligt fel. Fråga dig: är det ett ord eller två? Slå upp ordet om du är osäker.",
+    "Tips: Mellan två substantiv eller efter jätte- ska det oftast inte vara något mellanslag."
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "Skriv ihop orden: jätte + stor = ____.", "answers": ["jättestor"] },
+    { "type": "gap-fill", "text": "Skriv ihop orden: efter + som = ____.", "answers": ["eftersom"] },
+    { "type": "gap-fill", "text": "Skriv ordet rätt: tillbacka = ____.", "answers": ["tillbaka"] },
+    { "type": "gap-fill", "text": "Skriv ihop orden: utan + för = ____ (på andra sidan av dörren).", "answers": ["utanför"] },
+    { "type": "gap-fill", "text": "Skriv ihop orden: bord + tennis = ____.", "answers": ["bordtennis"] },
+    { "type": "gap-fill", "text": "Skriv ihop orden: mobil + telefon = ____.", "answers": ["mobiltelefon"] },
+    { "type": "multiple-choice", "question": "Vilket är rätt?", "options": ["efter som", "eftersom", "efter-som"], "answers": ["eftersom"] },
+    { "type": "multiple-choice", "question": "Vilket är rätt?", "options": ["jätte bra", "jättebra"], "answers": ["jättebra"] },
+    { "type": "multiple-choice", "question": "Vilket är rätt?", "options": ["tillsist", "till sist", "till-sist"], "answers": ["till sist"] },
+    { "type": "multiple-choice", "question": "Eleverna väntade ____.", "options": ["utan för skolan", "utanför skolan"], "answers": ["utanför skolan"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Det är jätte viktigt att vila.", "Det är jätteviktigt att vila."], "answers": ["Det är jätteviktigt att vila."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Vi spelar bord tennis på rasten.", "Vi spelar bordtennis på rasten."], "answers": ["Vi spelar bordtennis på rasten."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["På grund av regnet var rasten inne.", "Pågrund av regnet var rasten inne."], "answers": ["På grund av regnet var rasten inne."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Jag har tittat på tv hela tiden.", "Jag har tittat på tv helatiden."], "answers": ["Jag har tittat på tv hela tiden."] },
+    { "type": "context-answer", "context": "Det är ett jätte stort problem.", "question": "Skriv meningen rätt.", "answers": ["Det är ett jättestort problem.", "Det är ett jättestort problem"] },
+    { "type": "context-answer", "context": "Hon blev jätte trött efter skolan.", "question": "Skriv meningen rätt.", "answers": ["Hon blev jättetrött efter skolan.", "Hon blev jättetrött efter skolan"] },
+    { "type": "context-answer", "context": "Vi vill ha mobilerna tillbacka.", "question": "Skriv meningen rätt.", "answers": ["Vi vill ha mobilerna tillbaka.", "Vi vill ha mobilerna tillbaka"] },
+    { "type": "context-answer", "context": "Eleverna väntar utan för skolan.", "question": "Skriv meningen rätt.", "answers": ["Eleverna väntar utanför skolan.", "Eleverna väntar utanför skolan"] },
+    { "type": "context-answer", "context": "Jag är sen efter som bussen kom sent.", "question": "Skriv meningen rätt.", "answers": ["Jag är sen eftersom bussen kom sent.", "Jag är sen eftersom bussen kom sent"] },
+    { "type": "context-answer", "context": "Det är jätte svårt att leva med lite lön.", "question": "Skriv meningen rätt.", "answers": ["Det är jättesvårt att leva med lite lön.", "Det är jättesvårt att leva med lite lön"] }
+  ]
+}

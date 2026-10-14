@@ -1,0 +1,34 @@
+{
+  "title": "Preteritum och supinum (steg 2)",
+  "area": "Verb",
+  "rules": [
+    "Presens berättar om nu: Jag går. Preteritum berättar om förr: Jag gick. Perfekt använder har eller hade + supinum: Jag har gått.",
+    "Efter har, hade, kunde ha och skulle ha står supinum: har sagt, har tagit, har hänt, skulle ha hänt.",
+    "Vanliga oregelbundna verb (infinitiv, preteritum, supinum): ta, tog, tagit. säga, sa, sagt. gå, gick, gått. se, såg, sett. komma, kom, kommit. skriva, skrev, skrivit. bli, blev, blivit.",
+    "Regelbundna verb: läsa, läste, läst. hända, hände, hänt. arbeta, arbetade, arbetat.",
+    "Blanda inte ihop: Det händer (presens), det hände (preteritum), det har hänt (supinum).",
+    "Tips: Vill du berätta något som hände igår? Använd preteritum. Står har eller hade före verbet? Använd supinum."
+  ],
+  "exercises": [
+    { "type": "gap-fill", "text": "Igår ____ (ta) läraren mobilen.", "answers": ["tog"] },
+    { "type": "gap-fill", "text": "Förra veckan ____ (hända) något i skolan.", "answers": ["hände"] },
+    { "type": "gap-fill", "text": "Läraren ____ (säga) att provet var svårt.", "answers": ["sa", "sade"] },
+    { "type": "gap-fill", "text": "Vi ____ (se) en film igår.", "answers": ["såg"] },
+    { "type": "gap-fill", "text": "Eleverna ____ (komma) sent till lektionen.", "answers": ["kom"] },
+    { "type": "gap-fill", "text": "Hon ____ (skriva) en debattartikel.", "answers": ["skrev"] },
+    { "type": "gap-fill", "text": "Jag ____ (läsa) boken i somras.", "answers": ["läste"] },
+    { "type": "gap-fill", "text": "Läraren har ____ (ta) mobilen.", "answers": ["tagit"] },
+    { "type": "gap-fill", "text": "Eleven har ____ (säga) sin åsikt.", "answers": ["sagt"] },
+    { "type": "gap-fill", "text": "Det har ____ (hända) något i skolan.", "answers": ["hänt"] },
+    { "type": "gap-fill", "text": "Vi har ____ (gå) till biblioteket.", "answers": ["gått"] },
+    { "type": "gap-fill", "text": "Hon har ____ (skriva) tre texter.", "answers": ["skrivit"] },
+    { "type": "gap-fill", "text": "De har ____ (bli) trötta.", "answers": ["blivit"] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Det händet något igår.", "Det hände något igår."], "answers": ["Det hände något igår."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Läraren tog mobilen igår.", "Läraren tåg mobilen igår."], "answers": ["Läraren tog mobilen igår."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Det skulle ha hänt något.", "Det skulle haft hänt något."], "answers": ["Det skulle ha hänt något."] },
+    { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Han hade sade nej.", "Han hade sagt nej."], "answers": ["Han hade sagt nej."] },
+    { "type": "context-answer", "context": "Läraren har sakt att det är viktigt.", "question": "Skriv meningen rätt.", "answers": ["Läraren har sagt att det är viktigt.", "Läraren har sagt att det är viktigt"] },
+    { "type": "context-answer", "context": "Hon tåg mobilen i fredags.", "question": "Skriv meningen rätt.", "answers": ["Hon tog mobilen i fredags.", "Hon tog mobilen i fredags"] },
+    { "type": "context-answer", "context": "Vi har gick till skolan.", "question": "Skriv meningen rätt.", "answers": ["Vi har gått till skolan.", "Vi har gått till skolan"] }
+  ]
+}

@@ -65,3 +65,9 @@
 - **Motivering:** Eleverna ska få direkt, tydlig och vänlig återkoppling utan att något lagras eller skickas.
 - **Alternativ:** Rätta en uppgift i taget; spara poäng i webbläsaren.
 - **Status:** Gäller
+
+## 2026-10-14 – Tio nya övningar och "Skriv meningen rätt"
+- **Beslut:** Tio nya övningsfiler skapades från `text-analysis.md` (pronomen, substantiv, adjektiv, verb, ordföljd och skrivregler), med blandade uppgiftstyper: lucktext, välj rätt och "Skriv meningen rätt". "Skriv meningen rätt" använder den befintliga typen `context-answer`: den felaktiga meningen är `context`, frågan är "Skriv meningen rätt." och `answers` innehåller de rätta meningarna, med och utan sista punkt (och med och utan komma efter inledande bisats). Ingen ny övningstyp och ingen ändrad datastruktur. Övningen om skriftspråk och talspråk väntar. Svarsfält för kontextuppgifter är bredare i `css/style.css`. `data/test_ovning.json` har tagits bort av användaren.
+- **Motivering:** Eleverna ska träna på att skriva hela meningar rätt, inte bara välja. Den befintliga typen räcker, så inget i koden behöver ändras.
+- **Alternativ:** Ny övningstyp för att rätta meningar; fri text som rättas av läraren.
+- **Status:** Gäller
