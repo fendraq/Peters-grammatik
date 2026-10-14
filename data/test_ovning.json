@@ -1,5 +1,11 @@
 {
-  "titel": "Verb i preteritum",
-  "fråga": "Igår ____ jag till skolan.",
-  "svar": "gick"
+  "title": "Verb i preteritum",
+  "area": "Verb",
+  "exercises": [
+    {
+      "type": "gap-fill",
+      "text": "Igår ____ jag till skolan.",
+      "answers": ["gick"]
+    }
+  ]
 }

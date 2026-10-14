@@ -1,0 +1,23 @@
+{
+  "title": "Titel på övningen",
+  "area": "Område, t.ex. Verb",
+  "exercises": [
+    {
+      "type": "gap-fill",
+      "text": "Igår ____ jag till skolan.",
+      "answers": ["gick"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilket ord är rätt? Hon ____ en bok igår.",
+      "options": ["läser", "läste", "läsa"],
+      "answers": ["läste"]
+    },
+    {
+      "type": "context-answer",
+      "context": "Anna vaknade klockan sju. Sedan åt hon frukost.",
+      "question": "Vad gjorde Anna efter att hon vaknade?",
+      "answers": ["hon åt frukost", "åt frukost"]
+    }
+  ]
+}
