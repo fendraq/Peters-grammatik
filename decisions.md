@@ -36,6 +36,24 @@
 - **Alternativ:** Områden alltid öppna utan `<details>`.
 - **Status:** Gäller
 
+## 2026-10-14 – Områden utifrån processbarhetsteorin
+- **Beslut:** Övningsområden (`area`) är grammatiska ämnen, och steget i processbarhetsteorin anges i övningens titel. Preliminära områden: Substantiv (plural, bestämd form, en/ett), Verb (presens, preteritum, supinum, infinitiv), Adjektiv (kongruens i frasen och predikativt), Possessiva pronomen, Ordföljd (grundordföljd, adverb först, omkastning, bisats, negation). Listan är ett utkast och ska kontrolleras mot kurslitteraturen.
+- **Motivering:** Ämnen är enklast för eleverna att navigera. Stegen följer teorin och hjälper läraren att välja övningar.
+- **Alternativ:** Ett område per steg i teorin.
+- **Status:** Ersatt av Nya områden och regler i varje övning
+
+## 2026-10-14 – Nya områden och regler i varje övning
+- **Beslut:** Områden är Pronomen (ersätter Possessiva pronomen), Substantiv, Adjektiv, Verb, Ordföljd och Skrivregler. Varje övningsfil har ett nytt fält `rules` (lista med korta regler på enkel svenska). Reglerna visas högst upp i övningen under den utfällbara rubriken "Grammatiska regler", stängd från början. Varje övning har max 20 uppgifter. Fyra första övningar skapades: `pronouns_de_dem_det.json`, `nouns_en_ett.json`, `word_order_subordinate_clause.json` och `writing_rules_punctuation.json`.
+- **Motivering:** Eleverna ska kunna läsa grundreglerna innan de övar. De vanligaste felen i elevtexterna ger underlag för vad som ska övas först.
+- **Alternativ:** Regler på en separat sida; ingen regelruta.
+- **Status:** Gäller
+
+## 2026-10-14 – Textunderlag utan elevtexter i original
+- **Beslut:** `text-analysis.md` samlar felanalysen med korta, omskrivna exempel. Elevtexterna i original sparas inte i repot.
+- **Motivering:** Eleverna är minderåriga och repot är publikt. Nästa omgång övningar utgår från filen.
+- **Alternativ:** Spara elevtexterna i original (publikt eller lokalt via .gitignore).
+- **Status:** Gäller
+
 ## 2026-10-14 – Skrev README.md
 - **Beslut:** `README.md` på svenska beskriver syfte, övningstyper, tekniska ramar, filer och hur man kör sidan lokalt, enligt `AGENTS.md`.
 - **Motivering:** README.md var tom. Nya läsare behöver en kort översikt.

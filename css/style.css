@@ -95,6 +95,28 @@ main h2 {
     margin-bottom: 1rem;
 }
 
+.rules {
+    margin-top: 1.5rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.rules summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rules ul {
+    margin-top: 0.75rem;
+    padding-left: 1.25rem;
+}
+
+.rules li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
 footer {
     text-align: center;
     padding: 1rem;

@@ -1,0 +1,133 @@
+{
+  "title": "de, dem eller det (steg 2)",
+  "area": "Pronomen",
+  "rules": [
+    "De är subjekt. Det är de som gör något: De går till skolan.",
+    "Dem är objekt. Det kommer efter ett verb eller en preposition: Läraren hjälper dem. Jag tycker om dem.",
+    "Tips: byt ut ordet mot vi eller oss. Passar vi, skriv de (Vi går = De går). Passar oss, skriv dem (hjälper oss = hjälper dem).",
+    "Det används om en sak eller en situation. Det används också i uttryck som Det finns, Det är och Det blir.",
+    "De och dem uttalas ofta likadant, som dom. Men man ska skriva de eller dem."
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "I vår skola finns ____ många elever som vill ha mobilen på rasten.",
+      "options": ["de", "dem", "det"],
+      "answers": ["det"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Eleverna vill ha sina mobiler, men ____ får inte ha dem under lektionen.",
+      "options": ["de", "dem", "det"],
+      "answers": ["de"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Eleverna undrar något. Läraren hjälper ____ direkt.",
+      "options": ["de", "dem", "det"],
+      "answers": ["dem"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Alla elever är trötta, och ____ vill gå hem och vila.",
+      "options": ["de", "dem", "det"],
+      "answers": ["de"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Mobilen är viktig för många elever. Ibland blir ____ stressigt utan den.",
+      "options": ["de", "dem", "det"],
+      "answers": ["det"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Eleverna har mycket läxor. Läraren ger ____ nya läxor varje vecka.",
+      "options": ["de", "dem", "det"],
+      "answers": ["dem"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Jag tycker att ____ är bra att få använda mobilen på rasten.",
+      "options": ["de", "dem", "det"],
+      "answers": ["det"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Barnen är ensamma på rasten. Mobilen kan hjälpa ____ att känna sig mindre uttråkade.",
+      "options": ["de", "dem", "det"],
+      "answers": ["dem"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Många elever tror att ____ är dåligt med läxor.",
+      "options": ["de", "dem", "det"],
+      "answers": ["det"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Föräldrarna är oroliga och ____ vill kunna ringa sina barn.",
+      "options": ["de", "dem", "det"],
+      "answers": ["de"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vi har många kompisar i klassen. Vi tycker mycket om ____.",
+      "options": ["de", "dem", "det"],
+      "answers": ["dem"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "När eleverna är sjuka behöver ____ kontakta en vuxen.",
+      "options": ["de", "dem", "det"],
+      "answers": ["de"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "På rasten är ____ roligt att spela pingis.",
+      "options": ["de", "dem", "det"],
+      "answers": ["det"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Eleverna kan inte sova, och ____ gör dem trötta nästa dag.",
+      "options": ["de", "dem", "det"],
+      "answers": ["det"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Jag ser lärarna varje dag och jag hälsar på ____.",
+      "options": ["de", "dem", "det"],
+      "answers": ["dem"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Många ungdomar säger att ____ har för lite fritid.",
+      "options": ["de", "dem", "det"],
+      "answers": ["de"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Klockan ringer när ____ är dags att gå hem.",
+      "options": ["de", "dem", "det"],
+      "answers": ["det"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vi frågade eleverna och ____ svarade att de inte hade tid.",
+      "options": ["de", "dem", "det"],
+      "answers": ["de"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Läxor kan stressa elever. Ge inte ____ för mycket att göra.",
+      "options": ["de", "dem", "det"],
+      "answers": ["dem"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Ute på rasten är ____ många som står och tittar på mobilen.",
+      "options": ["de", "dem", "det"],
+      "answers": ["det"]
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "title": "Skiljetecken och mellanslag",
+  "area": "Skrivregler",
+  "rules": [
+    "Skriv inget mellanslag före komma, punkt, frågetecken och utropstecken. Skriv ett mellanslag efter: Hej, jag heter Sara.",
+    "Börja alltid med stor bokstav i början av en mening och efter punkt, frågetecken och utropstecken.",
+    "Använd bara ett tecken i slutet: ? eller !. Skriv inte !!! eller ?.",
+    "Skriv komma mellan orden i en uppräkning, men inte före och: pingis, biljard och brädspel.",
+    "Förkortningar har punkt efter varje del: t.ex. (till exempel), osv. (och så vidare), bl.a. (bland annat)."
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Jag har en mobil, en dator och en klocka.",
+        "Jag har en mobil,en dator och en klocka."
+      ],
+      "answers": ["Jag har en mobil, en dator och en klocka."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Vi har pingis,biljard och brädspel.",
+        "Vi har pingis, biljard och brädspel."
+      ],
+      "answers": ["Vi har pingis, biljard och brädspel."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Har du en mobil ?",
+        "Har du en mobil?"
+      ],
+      "answers": ["Har du en mobil?"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Vad bra!",
+        "Vad bra!!!"
+      ],
+      "answers": ["Vad bra!"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Räcker det inte?.",
+        "Räcker det inte?"
+      ],
+      "answers": ["Räcker det inte?"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken text är rätt skriven?",
+      "options": [
+        "Eleverna är trötta. De vill gå hem.",
+        "Eleverna är trötta. de vill gå hem."
+      ],
+      "answers": ["Eleverna är trötta. De vill gå hem."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Vi behöver mer tid, t.ex för vila.",
+        "Vi behöver mer tid, t.ex. för vila."
+      ],
+      "answers": ["Vi behöver mer tid, t.ex. för vila."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Jag gillar spel, serier osv.",
+        "Jag gillar spel, serier osv"
+      ],
+      "answers": ["Jag gillar spel, serier osv."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken text är rätt skriven?",
+      "options": [
+        "Hej!Jag heter Sara.",
+        "Hej! Jag heter Sara."
+      ],
+      "answers": ["Hej! Jag heter Sara."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "idag ska jag skriva om mobiler.",
+        "Idag ska jag skriva om mobiler."
+      ],
+      "answers": ["Idag ska jag skriva om mobiler."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Varför ska vi ha läxor?",
+        "Varför ska vi ha läxor."
+      ],
+      "answers": ["Varför ska vi ha läxor?"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Först kommer rasten , sedan lektionen.",
+        "Först kommer rasten, sedan lektionen."
+      ],
+      "answers": ["Först kommer rasten, sedan lektionen."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Mobilen är bra, men den kan också störa.",
+        "Mobilen är bra, men,den kan också störa."
+      ],
+      "answers": ["Mobilen är bra, men den kan också störa."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Vi vill ha våra mobiler tillbaka!!!",
+        "Vi vill ha våra mobiler tillbaka!"
+      ],
+      "answers": ["Vi vill ha våra mobiler tillbaka!"]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "läraren sa att provet är på fredag.",
+        "Läraren sa att provet är på fredag."
+      ],
+      "answers": ["Läraren sa att provet är på fredag."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt skriven?",
+      "options": [
+        "Tack för hjälpen .",
+        "Tack för hjälpen."
+      ],
+      "answers": ["Tack för hjälpen."]
+    }
+  ]
+}

@@ -1,3 +1,9 @@
 {
-  "files": ["test_ovning.json"]
+  "files": [
+    "test_ovning.json",
+    "pronouns_de_dem_det.json",
+    "nouns_en_ett.json",
+    "word_order_subordinate_clause.json",
+    "writing_rules_punctuation.json"
+  ]
 }

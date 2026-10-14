@@ -1,0 +1,115 @@
+{
+  "title": "en eller ett (steg 2)",
+  "area": "Substantiv",
+  "rules": [
+    "Alla substantiv i svenska är antingen en-ord eller ett-ord: en bil, ett hus.",
+    "De flesta substantiv är en-ord. Lär dig ordet tillsammans med en eller ett.",
+    "Ord för personer är oftast en-ord: en elev, en lärare, en kompis. Undantag: ett barn.",
+    "Ord som slutar på -are, -het och -ing är en-ord: en lärare, en möjlighet, en träning.",
+    "Ord som slutar på -um är ett-ord: ett museum, ett gymnasium.",
+    "Är du osäker? Slå upp ordet i en ordbok. Där står en eller ett.",
+    "Bestämd form: en bil blir bilen, ett hus blir huset."
+  ],
+  "exercises": [
+    {
+      "type": "gap-fill",
+      "text": "Jag har ____ mobil i väskan.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Det är ____ problem för många elever.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Skolan är ____ plats där alla ska känna sig trygga.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Mobilen kan vara ____ verktyg i skolan.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Vi bor i ____ samhälle med mycket teknik.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Eleven fick ____ betyg som hon inte väntade sig.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Läraren gav oss ____ läxa i matematik.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Varje elev behöver ____ kompis på rasten.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Det är ____ bra idé att ta pauser.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Appen är ____ hjälpmedel för elever med dyslexi.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Jag har ____ prov på fredag.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Det är ____ stor fördel att kunna ringa sina föräldrar.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Läraren ställde ____ fråga till klassen.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Många elever vill ha ____ svar direkt.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Varje skola behöver ____ tydlig regel.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Skolan har ____ bibliotek med många böcker.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Det är ____ vanligt argument i debatten.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Hon ville ha ____ sak som kunde hjälpa henne.",
+      "answers": ["en"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Vi fick ____ tips av läraren.",
+      "answers": ["ett"]
+    },
+    {
+      "type": "gap-fill",
+      "text": "Läraren hade ____ stort ansvar.",
+      "answers": ["ett"]
+    }
+  ]
+}

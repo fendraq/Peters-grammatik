@@ -1,0 +1,176 @@
+{
+  "title": "inte och alltid i bisats (steg 5)",
+  "area": "Ordföljd",
+  "rules": [
+    "En huvudsats kan stå ensam. Verbet står på plats 2 och ordet inte kommer efter verbet: Jag kan inte komma.",
+    "En bisats kan inte stå ensam. Den börjar ofta med att, eftersom, om, när, som eller för att.",
+    "I en bisats kommer inte före verbet: ...eftersom jag inte kan komma.",
+    "Samma regel gäller för ord som alltid, aldrig och ofta: ...att de alltid har prov.",
+    "Tips: huvudsats = verb + inte. Bisats = inte + verb.",
+    "Indirekt fråga är också en bisats. Direkt fråga: Vad är klockan? Indirekt fråga: Jag vet inte vad klockan är."
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Jag tycker att mobilen inte stör lektionen.",
+        "Jag tycker att mobilen stör inte lektionen."
+      ],
+      "answers": ["Jag tycker att mobilen inte stör lektionen."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Eleverna är stressade eftersom de har alltid prov.",
+        "Eleverna är stressade eftersom de alltid har prov."
+      ],
+      "answers": ["Eleverna är stressade eftersom de alltid har prov."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Jag vet inte vad är klockan.",
+        "Jag vet inte vad klockan är."
+      ],
+      "answers": ["Jag vet inte vad klockan är."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Läraren säger att eleverna kan inte använda mobilen.",
+        "Läraren säger att eleverna inte kan använda mobilen."
+      ],
+      "answers": ["Läraren säger att eleverna inte kan använda mobilen."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Hon blir ledsen när hon kan inte ringa sina föräldrar.",
+        "Hon blir ledsen när hon inte kan ringa sina föräldrar."
+      ],
+      "answers": ["Hon blir ledsen när hon inte kan ringa sina föräldrar."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Jag tror att läxor aldrig hjälper alla elever.",
+        "Jag tror att läxor hjälper aldrig alla elever."
+      ],
+      "answers": ["Jag tror att läxor aldrig hjälper alla elever."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Han undrar varför han får inte ha mobilen.",
+        "Han undrar varför han inte får ha mobilen."
+      ],
+      "answers": ["Han undrar varför han inte får ha mobilen."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Om eleverna har inte mobil, blir rasten tråkig.",
+        "Om eleverna inte har mobil, blir rasten tråkig."
+      ],
+      "answers": ["Om eleverna inte har mobil, blir rasten tråkig."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Det är bra att man alltid kan ringa hem.",
+        "Det är bra att man kan alltid ringa hem."
+      ],
+      "answers": ["Det är bra att man alltid kan ringa hem."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Vi vet inte hur länge är rasten.",
+        "Vi vet inte hur länge rasten är."
+      ],
+      "answers": ["Vi vet inte hur länge rasten är."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Eleverna säger att de känner ofta sig ensamma.",
+        "Eleverna säger att de ofta känner sig ensamma."
+      ],
+      "answers": ["Eleverna säger att de ofta känner sig ensamma."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Hon frågar varför läxorna tar aldrig slut.",
+        "Hon frågar varför läxorna aldrig tar slut."
+      ],
+      "answers": ["Hon frågar varför läxorna aldrig tar slut."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Många tycker att skolan inte ger tillräckligt med tid för vila.",
+        "Många tycker att skolan ger inte tillräckligt med tid för vila."
+      ],
+      "answers": ["Många tycker att skolan inte ger tillräckligt med tid för vila."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Jag vill veta vad är läxan till imorgon.",
+        "Jag vill veta vad läxan är till imorgon."
+      ],
+      "answers": ["Jag vill veta vad läxan är till imorgon."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Föräldrarna blir oroliga eftersom barnen svarar inte i telefonen.",
+        "Föräldrarna blir oroliga eftersom barnen inte svarar i telefonen."
+      ],
+      "answers": ["Föräldrarna blir oroliga eftersom barnen inte svarar i telefonen."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Jag inte kan komma i tid.",
+        "Jag kan inte komma i tid."
+      ],
+      "answers": ["Jag kan inte komma i tid."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Eleverna kan inte använda mobilen på lektionen, eftersom läraren inte tillåter det.",
+        "Eleverna inte kan använda mobilen på lektionen, eftersom läraren inte tillåter det."
+      ],
+      "answers": ["Eleverna kan inte använda mobilen på lektionen, eftersom läraren inte tillåter det."]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Vilken mening är rätt?",
+      "options": [
+        "Han säger att han har inte tid, men han har alltid tid på rasten.",
+        "Han säger att han inte har tid, men han har alltid tid på rasten."
+      ],
+      "answers": ["Han säger att han inte har tid, men han har alltid tid på rasten."]
+    }
+  ]
+}

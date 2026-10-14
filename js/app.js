@@ -36,6 +36,24 @@
         return groups;
     }
 
+    function createRules(rules) {
+        const details = document.createElement("details");
+        details.className = "rules";
+
+        const summary = document.createElement("summary");
+        summary.textContent = "Grammatiska regler";
+
+        const list = document.createElement("ul");
+        rules.forEach(function (rule) {
+            const item = document.createElement("li");
+            item.textContent = rule;
+            list.appendChild(item);
+        });
+
+        details.append(summary, list);
+        return details;
+    }
+
     function showExercise(exercise) {
         const heading = document.createElement("h2");
         heading.textContent = exercise.title;
@@ -45,6 +63,9 @@
         area.textContent = "Område: " + exercise.area;
 
         content.replaceChildren(heading, area);
+        if (exercise.rules && exercise.rules.length > 0) {
+            content.appendChild(createRules(exercise.rules));
+        }
         heading.focus();
     }
 

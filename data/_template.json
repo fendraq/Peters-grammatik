@@ -1,6 +1,10 @@
 {
   "title": "Titel på övningen",
   "area": "Område, t.ex. Verb",
+  "rules": [
+    "Kort regel på enkel svenska.",
+    "En regel till, gärna med ett exempel: Igår gick jag till skolan."
+  ],
   "exercises": [
     {
       "type": "gap-fill",

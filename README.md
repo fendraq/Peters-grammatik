@@ -14,6 +14,7 @@ En övningssida i svenska för elever som har svenska som andraspråk. Sidan har
 - Vanlig HTML, CSS och JavaScript. Inga ramverk, bibliotek eller build-steg.
 - Inga cookies, inga spårare och inga externa tjänster.
 - Övningar ligger som data i JSON-filer i `data/`. Nya övningar läggs till i JSON, utan kodändring.
+- Varje övningsfil har `rules` (regler som visas som "Grammatiska regler") och högst 20 uppgifter.
 
 ## Filer
 
@@ -22,7 +23,8 @@ En övningssida i svenska för elever som har svenska som andraspråk. Sidan har
 | `index.html` | Sidan |
 | `css/style.css` | Utseende |
 | `js/app.js` | Kod för övningarna |
-| `data/` | Övningar i JSON-format |
+| `data/` | Övningar i JSON-format. `_template.json` är en mall och `index.json` listar övningsfilerna |
+| `text-analysis.md` | Felanalys av elevtexter som underlag för nya övningar |
 | `AGENTS.md` | Regler för AI-agenter som arbetar i repot |
 | `decisions.md` | Beslut som har tagits i projektet |
 
