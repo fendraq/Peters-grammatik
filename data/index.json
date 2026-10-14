@@ -10,6 +10,7 @@
     "adjectives_predicative.json",
     "verbs_infinitive.json",
     "verbs_tense.json",
+    "verbs_find_verbs.json",
     "word_order_inversion.json",
     "writing_rules_compound_words.json",
     "writing_rules_spelling.json",

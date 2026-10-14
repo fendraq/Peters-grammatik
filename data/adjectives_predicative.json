@@ -2,7 +2,7 @@
   "title": "Adjektiv efter verbet (steg 4)",
   "area": "Adjektiv",
   "rules": [
-    "Adjektiv efter är, blir, känns, verkar och känner sig passar ordet de beskriver.",
+    "Adjektiv efter 'är', 'blir', 'känns', 'verkar' och 'känner sig' passar ordet de beskriver.",
     "En-ord: Mobilen är viktig. Ett-ord: Problemet är stort (adjektivet får -t). Flera: Läxorna är svåra (adjektivet får -a).",
     "Efter känner sig gäller samma regel: Eleven känner sig trygg. Eleverna känner sig trygga.",
     "Adjektiv som slutar på -ad får -ade i plural: stressad → stressade, uttråkad → uttråkade.",
@@ -26,9 +26,9 @@
     { "type": "multiple-choice", "question": "Det nya huset är ____.", "options": ["stor", "stort", "stora"], "answers": ["stort"] },
     { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Läxorna är jobbigt.", "Läxorna är jobbiga."], "answers": ["Läxorna är jobbiga."] },
     { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Eleven känner sig ensamma.", "Eleven känner sig ensam."], "answers": ["Eleven känner sig ensam."] },
-    { "type": "context-answer", "context": "Eleverna känner sig ensam på rasten.", "question": "Skriv meningen rätt.", "answers": ["Eleverna känner sig ensamma på rasten.", "Eleverna känner sig ensamma på rasten"] },
-    { "type": "context-answer", "context": "Problemet är stor.", "question": "Skriv meningen rätt.", "answers": ["Problemet är stort.", "Problemet är stort"] },
-    { "type": "context-answer", "context": "Barnen är uttråkad.", "question": "Skriv meningen rätt.", "answers": ["Barnen är uttråkade.", "Barnen är uttråkade"] },
-    { "type": "context-answer", "context": "Mobilerna är viktigt för eleverna.", "question": "Skriv meningen rätt.", "answers": ["Mobilerna är viktiga för eleverna.", "Mobilerna är viktiga för eleverna"] }
+    { "type": "context-answer", "context": "Eleverna känner sig ensam på rasten.", "question": "Skriv meningen rätt.", "answers": ["Eleverna känner sig ensamma på rasten."] },
+    { "type": "context-answer", "context": "Problemet är stor.", "question": "Skriv meningen rätt.", "answers": ["Problemet är stort."] },
+    { "type": "context-answer", "context": "Barnen är uttråkad.", "question": "Skriv meningen rätt.", "answers": ["Barnen är uttråkade."] },
+    { "type": "context-answer", "context": "Mobilerna är viktigt för eleverna.", "question": "Skriv meningen rätt.", "answers": ["Mobilerna är viktiga för eleverna."] }
   ]
 }

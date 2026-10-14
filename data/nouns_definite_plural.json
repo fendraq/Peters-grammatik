@@ -23,12 +23,12 @@
     { "type": "gap-fill", "text": "Skriv plural: en lektion → fyra ____.", "answers": ["lektioner"] },
     { "type": "gap-fill", "text": "Skriv plural: ett betyg → bra ____.", "answers": ["betyg"] },
     { "type": "gap-fill", "text": "Skriv plural: en timme → sju ____.", "answers": ["timmar"] },
-    { "type": "multiple-choice", "question": "Vilken är plural av ett barn?", "options": ["barn", "barnen", "barner"], "answers": ["barn"] },
+    { "type": "multiple-choice", "question": "Vilken är obestämd form i plural av ett barn?", "options": ["barn", "barnen", "barner"], "answers": ["barn"] },
     { "type": "multiple-choice", "question": "Vilken är bestämd form av ett äpple?", "options": ["äpplet", "äpplen", "äppleet"], "answers": ["äpplet"] },
     { "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["Jag fick bra betygen i alla ämnen.", "Jag fick bra betyg i alla ämnen."], "answers": ["Jag fick bra betyg i alla ämnen."] },
     { "type": "multiple-choice", "question": "Vilken är plural av en bok?", "options": ["boker", "böcker", "bokar"], "answers": ["böcker"] },
-    { "type": "context-answer", "context": "Eleverna har många läxer.", "question": "Skriv meningen rätt.", "answers": ["Eleverna har många läxor.", "Eleverna har många läxor"] },
-    { "type": "context-answer", "context": "Jag fick den stöden av läraren.", "question": "Skriv meningen rätt.", "answers": ["Jag fick det stödet av läraren.", "Jag fick det stödet av läraren"] },
-    { "type": "context-answer", "context": "Hon har fyra lektion på måndagen.", "question": "Skriv meningen rätt.", "answers": ["Hon har fyra lektioner på måndagen.", "Hon har fyra lektioner på måndagen"] }
+    { "type": "context-answer", "context": "Eleverna har många läxer.", "question": "Skriv meningen rätt.", "answers": ["Eleverna har många läxor."] },
+    { "type": "context-answer", "context": "Jag fick den stöden av läraren.", "question": "Skriv meningen rätt.", "answers": ["Jag fick det stödet av läraren."] },
+    { "type": "context-answer", "context": "Hon har fyra lektion på måndagen.", "question": "Skriv meningen rätt.", "answers": ["Hon har fyra lektioner på måndagen."] }
   ]
 }

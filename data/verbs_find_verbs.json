@@ -1,0 +1,133 @@
+{
+  "title": "Hitta verben i meningen",
+  "area": "Verb",
+  "rules": [
+    "Ett verb säger vad någon gör, vad som händer eller hur något är: Jag läser. Det regnar. Hon är glad.",
+    "Verb finns i olika former: går, gick, har gått.",
+    "Hjälpverb är också verb: kan, vill, måste, ska, skulle, har, hade. Efter ett hjälpverb kommer ofta ett verb till: Jag kan simma. Hon har läst.",
+    "Orden är, var, blir och finns är också verb.",
+    "Tips: verb kan byta tid. Prova med igår: Jag läser → Igår läste jag. Om ordet kan ändras så här är det ett verb."
+  ],
+  "exercises": [
+    {
+      "type": "select-words",
+      "question": "Klicka på verbet i meningen.",
+      "words": ["Eleverna", "går", "till", "skolan", "varje", "dag."],
+      "answers": [1]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på verbet i meningen.",
+      "words": ["Läraren", "tog", "mobilen", "igår."],
+      "answers": [1]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Jag", "har", "skrivit", "en", "text", "om", "läxor."],
+      "answers": [1, 2]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Många", "elever", "vill", "ha", "mobilen", "på", "rasten."],
+      "answers": [2, 3]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Hon", "måste", "hämta", "telefonen."],
+      "answers": [1, 2]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Vi", "läste", "en", "bok", "och", "diskuterade", "den."],
+      "answers": [1, 5]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på verbet i meningen.",
+      "words": ["Det", "finns", "många", "regler", "i", "skolan."],
+      "answers": [1]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på verbet i meningen.",
+      "words": ["Betyg", "är", "viktiga", "för", "många", "elever."],
+      "answers": [1]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["När", "eleverna", "kommer", "hem,", "gör", "de", "sina", "läxor."],
+      "answers": [2, 4]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Jag", "tror", "att", "mobilen", "kan", "hjälpa", "mig", "i", "skolan."],
+      "answers": [1, 4, 5]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Läraren", "sa", "att", "provet", "var", "svårt."],
+      "answers": [1, 4]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["De", "har", "inte", "sett", "filmen", "än."],
+      "answers": [1, 3]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Eleven", "blev", "glad", "när", "hon", "fick", "ett", "bra", "betyg."],
+      "answers": [1, 5]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Vi", "ska", "träffas", "efter", "lektionen."],
+      "answers": [1, 2]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Han", "skulle", "ha", "hjälpt", "sin", "kompis."],
+      "answers": [1, 2, 3]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på verbet i meningen.",
+      "words": ["Skolan", "börjar", "klockan", "åtta."],
+      "answers": [1]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Många", "tycker", "att", "läxor", "tar", "för", "mycket", "tid."],
+      "answers": [1, 4]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Eleverna", "sitter", "tysta", "och", "lyssnar", "på", "läraren."],
+      "answers": [1, 4]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Jag", "vet", "inte", "om", "jag", "vill", "byta", "skola."],
+      "answers": [1, 5, 6]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen.",
+      "words": ["Hon", "har", "arbetat", "hårt,", "men", "hon", "blev", "ändå", "nervös."],
+      "answers": [1, 2, 6]
+    }
+  ]
+}

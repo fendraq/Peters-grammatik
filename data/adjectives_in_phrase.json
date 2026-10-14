@@ -25,10 +25,10 @@
     { "type": "multiple-choice", "question": "Det är en ____ plats.", "options": ["trygg", "tryggt", "trygga"], "answers": ["trygg"] },
     { "type": "multiple-choice", "question": "Skolan är ett ____ ställe.", "options": ["trygg", "tryggt", "trygga"], "answers": ["tryggt"] },
     { "type": "multiple-choice", "question": "Vi har många ____ regler.", "options": ["viktig", "viktigt", "viktiga"], "answers": ["viktiga"] },
-    { "type": "context-answer", "context": "Det är en digitalt verktyg.", "question": "Skriv meningen rätt.", "answers": ["Det är ett digitalt verktyg.", "Det är ett digitalt verktyg"] },
-    { "type": "context-answer", "context": "Hon fick dålig betyg i matte.", "question": "Skriv meningen rätt.", "answers": ["Hon fick dåligt betyg i matte.", "Hon fick dåligt betyg i matte", "Hon fick ett dåligt betyg i matte.", "Hon fick ett dåligt betyg i matte"] },
-    { "type": "context-answer", "context": "Jag vill ha full fokus på lektionen.", "question": "Skriv meningen rätt.", "answers": ["Jag vill ha fullt fokus på lektionen.", "Jag vill ha fullt fokus på lektionen"] },
-    { "type": "context-answer", "context": "Vi läser viktiga information.", "question": "Skriv meningen rätt.", "answers": ["Vi läser viktig information.", "Vi läser viktig information"] },
-    { "type": "context-answer", "context": "Det är ett fantastisk sak.", "question": "Skriv meningen rätt.", "answers": ["Det är en fantastisk sak.", "Det är en fantastisk sak"] }
+    { "type": "context-answer", "context": "Det är en digitalt verktyg.", "question": "Skriv meningen rätt.", "answers": ["Det är ett digitalt verktyg."] },
+    { "type": "context-answer", "context": "Hon fick dålig betyg i matte.", "question": "Skriv meningen rätt.", "answers": ["Hon fick dåligt betyg i matte.", "Hon fick ett dåligt betyg i matte."] },
+    { "type": "context-answer", "context": "Jag vill ha full fokus på lektionen.", "question": "Skriv meningen rätt.", "answers": ["Jag vill ha fullt fokus på lektionen."] },
+    { "type": "context-answer", "context": "Vi läser viktiga information.", "question": "Skriv meningen rätt.", "answers": ["Vi läser viktig information."] },
+    { "type": "context-answer", "context": "Det är ett fantastisk sak.", "question": "Skriv meningen rätt.", "answers": ["Det är en fantastisk sak."] }
   ]
 }

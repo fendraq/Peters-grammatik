@@ -22,6 +22,18 @@
       "context": "Anna vaknade klockan sju. Sedan åt hon frukost.",
       "question": "Vad gjorde Anna efter att hon vaknade?",
       "answers": ["hon åt frukost", "åt frukost"]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på alla verb i meningen. (words = orden i meningen. answers = platser, första platsen är 0.)",
+      "words": ["Anna", "har", "läst", "en", "bok."],
+      "answers": [1, 2]
+    },
+    {
+      "type": "select-words",
+      "question": "Klicka på bisatsen. (Varje del i words kan vara flera ord.)",
+      "words": ["Jag går till skolan", ", eftersom min cykel är sönder."],
+      "answers": [1]
     }
   ]
 }
