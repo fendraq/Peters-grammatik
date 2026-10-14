@@ -54,6 +54,186 @@
         return details;
     }
 
+    function normalizeText(text) {
+        return text.normalize("NFC").trim().replace(/\s+/g, " ").toLocaleLowerCase("sv");
+    }
+
+    function matchesText(value, answers) {
+        const normalized = normalizeText(value);
+        return normalized !== "" && answers.some(function (answer) {
+            return normalizeText(answer) === normalized;
+        });
+    }
+
+    function createTextInput(labelText) {
+        const label = document.createElement("label");
+        const hidden = document.createElement("span");
+        hidden.className = "visually-hidden";
+        hidden.textContent = labelText;
+
+        const input = document.createElement("input");
+        input.type = "text";
+        input.autocomplete = "off";
+        input.autocapitalize = "none";
+        input.spellcheck = false;
+
+        label.append(hidden, input);
+        return { label: label, input: input };
+    }
+
+    function createGapFillTask(exercise, number) {
+        const parts = exercise.text.split("____");
+        const field = createTextInput("Svar till uppgift " + number);
+
+        const sentence = document.createElement("p");
+        sentence.append(parts[0], field.label, parts.slice(1).join(""));
+
+        return {
+            element: sentence,
+            getValue: function () { return field.input.value; },
+            isCorrect: function (value) { return matchesText(value, exercise.answers); },
+            emptyMessage: "Skriv ett svar först."
+        };
+    }
+
+    function createMultipleChoiceTask(exercise, number) {
+        const fieldset = document.createElement("fieldset");
+        const legend = document.createElement("legend");
+        legend.textContent = exercise.question;
+        fieldset.appendChild(legend);
+
+        exercise.options.forEach(function (option) {
+            const label = document.createElement("label");
+            const radio = document.createElement("input");
+            radio.type = "radio";
+            radio.name = "task-" + number;
+            radio.value = option;
+            label.append(radio, " " + option);
+            fieldset.appendChild(label);
+        });
+
+        return {
+            element: fieldset,
+            getValue: function () {
+                const checked = fieldset.querySelector("input:checked");
+                return checked ? checked.value : "";
+            },
+            isCorrect: function (value) { return value !== "" && exercise.answers.includes(value); },
+            emptyMessage: "Välj ett svar först."
+        };
+    }
+
+    function createContextAnswerTask(exercise, number) {
+        const wrapper = document.createElement("div");
+
+        const context = document.createElement("blockquote");
+        context.textContent = exercise.context;
+
+        const question = document.createElement("p");
+        question.textContent = exercise.question;
+
+        const field = createTextInput("Svar till uppgift " + number);
+        wrapper.append(context, question, field.label);
+
+        return {
+            element: wrapper,
+            getValue: function () { return field.input.value; },
+            isCorrect: function (value) { return matchesText(value, exercise.answers); },
+            emptyMessage: "Skriv ett svar först."
+        };
+    }
+
+    const taskCreators = {
+        "gap-fill": createGapFillTask,
+        "multiple-choice": createMultipleChoiceTask,
+        "context-answer": createContextAnswerTask
+    };
+
+    function createTaskItem(exercise, number) {
+        const creator = taskCreators[exercise.type];
+        if (!creator) {
+            return null;
+        }
+        const task = creator(exercise, number);
+        const feedback = document.createElement("p");
+        feedback.className = "feedback";
+
+        const item = document.createElement("li");
+        item.append(task.element, feedback);
+
+        return { item: item, task: task, feedback: feedback, answers: exercise.answers };
+    }
+
+    function setFeedback(feedback, kind, text) {
+        feedback.className = "feedback " + kind;
+        feedback.textContent = text;
+    }
+
+    function checkTask(entry) {
+        const value = entry.task.getValue();
+        if (normalizeText(value) === "") {
+            setFeedback(entry.feedback, "wrong", "❌ " + entry.task.emptyMessage);
+            return false;
+        }
+        if (entry.task.isCorrect(value)) {
+            setFeedback(entry.feedback, "correct", "✅ Rätt!");
+            return true;
+        }
+        setFeedback(entry.feedback, "wrong",
+            "❌ Inte riktigt. Försök igen. Rätt svar: " + entry.answers.join(" eller "));
+        return false;
+    }
+
+    function createSummaryText(correctCount, total) {
+        const result = "Du fick " + correctCount + " av " + total + " rätt. ";
+        if (correctCount === total) {
+            return result + "Fantastiskt, du hade allt rätt!";
+        }
+        if (correctCount * 2 >= total) {
+            return result + "Bra jobbat! Titta på de som blev fel och försök igen.";
+        }
+        return result + "Bra försök! Läs reglerna och försök igen.";
+    }
+
+    function createExerciseForm(exercises) {
+        const form = document.createElement("form");
+        form.noValidate = true;
+
+        const list = document.createElement("ol");
+        list.className = "tasks";
+        const entries = exercises
+            .map(function (exercise, index) { return createTaskItem(exercise, index + 1); })
+            .filter(function (entry) { return entry !== null; });
+        entries.forEach(function (entry) { list.appendChild(entry.item); });
+
+        const checkButton = document.createElement("button");
+        checkButton.type = "submit";
+        checkButton.textContent = "Rätta";
+
+        const resetButton = document.createElement("button");
+        resetButton.type = "button";
+        resetButton.textContent = "Börja om";
+
+        const summary = document.createElement("p");
+        summary.className = "summary";
+        summary.setAttribute("role", "status");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const correctCount = entries.filter(checkTask).length;
+            summary.textContent = createSummaryText(correctCount, entries.length);
+        });
+
+        resetButton.addEventListener("click", function () {
+            form.reset();
+            entries.forEach(function (entry) { setFeedback(entry.feedback, "", ""); });
+            summary.textContent = "";
+        });
+
+        form.append(list, checkButton, resetButton, summary);
+        return form;
+    }
+
     function showExercise(exercise) {
         const heading = document.createElement("h2");
         heading.textContent = exercise.title;
@@ -66,6 +246,7 @@
         if (exercise.rules && exercise.rules.length > 0) {
             content.appendChild(createRules(exercise.rules));
         }
+        content.appendChild(createExerciseForm(exercise.exercises));
         heading.focus();
     }
 
@@ -91,7 +272,6 @@
 
     function createAreaSection(areaName, exercises) {
         const details = document.createElement("details");
-        details.open = true;
 
         const summary = document.createElement("summary");
         summary.textContent = areaName;

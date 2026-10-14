@@ -50,7 +50,13 @@ nav summary {
 
 nav ul {
     list-style: none;
-    padding-left: 1rem;
+    padding: 0.5rem;
+    background: #2b2b2b;
+    border-radius: 6px;
+}
+
+nav li + li {
+    margin-top: 0.25rem;
 }
 
 nav button {
@@ -66,11 +72,11 @@ nav button {
 }
 
 nav button:hover {
-    background: #333;
+    background: #444;
 }
 
 nav button[aria-current="true"] {
-    background: #444;
+    background: #666;
     font-weight: bold;
 }
 
@@ -115,6 +121,102 @@ main h2 {
 .rules li {
     margin-bottom: 0.5rem;
     line-height: 1.5;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.tasks {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.tasks > li {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tasks fieldset {
+    border: none;
+}
+
+.tasks legend {
+    margin-bottom: 0.5rem;
+}
+
+.tasks fieldset label {
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.tasks input[type="radio"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: 0.25rem;
+}
+
+.tasks > li > div input[type="text"] {
+    display: block;
+    width: 100%;
+    max-width: 24rem;
+    margin: 0.5rem 0 0;
+}
+
+.tasks blockquote {
+    border-left: 4px solid #777;
+    padding-left: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+input[type="text"] {
+    background: #222;
+    color: #fff;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 0.4rem 0.6rem;
+    margin: 0 0.4rem;
+    font: inherit;
+    width: 9rem;
+}
+
+main button {
+    background: #444;
+    color: #fff;
+    border: 1px solid #888;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    margin-right: 0.75rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+main button:hover {
+    background: #666;
+}
+
+.feedback {
+    margin-top: 0.4rem;
+    font-weight: bold;
+}
+
+.feedback.correct {
+    color: #6cff6c;
+}
+
+.feedback.wrong {
+    color: #ff8a8a;
+}
+
+.summary {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 footer {

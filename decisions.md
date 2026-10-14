@@ -34,7 +34,7 @@
 - **Beslut:** `index.html` har en sidomeny (`<nav>`) och en innehållsyta. `js/app.js` läser `data/index.json` och alla filer som listas där, grupperar övningarna efter `area` och bygger menyn med hopfällbara områden (`<details>`, öppna från start). Klick på en övning visar titel och område. Den hårdkodade lucktexten och `onclick` är borttagna. Rättning och visning av själva övningarna kommer i nästa steg. Dark theme behålls.
 - **Motivering:** Menyn ska fyllas utifrån JSON utan kodändring. Valda övningar markeras med symbol (▶) och inte bara färg.
 - **Alternativ:** Områden alltid öppna utan `<details>`.
-- **Status:** Gäller
+- **Status:** Delvis ersatt av Sidomenyn: stängda områden och grå underlista
 
 ## 2026-10-14 – Områden utifrån processbarhetsteorin
 - **Beslut:** Övningsområden (`area`) är grammatiska ämnen, och steget i processbarhetsteorin anges i övningens titel. Preliminära områden: Substantiv (plural, bestämd form, en/ett), Verb (presens, preteritum, supinum, infinitiv), Adjektiv (kongruens i frasen och predikativt), Possessiva pronomen, Ordföljd (grundordföljd, adverb först, omkastning, bisats, negation). Listan är ett utkast och ska kontrolleras mot kurslitteraturen.
@@ -58,4 +58,10 @@
 - **Beslut:** `README.md` på svenska beskriver syfte, övningstyper, tekniska ramar, filer och hur man kör sidan lokalt, enligt `AGENTS.md`.
 - **Motivering:** README.md var tom. Nya läsare behöver en kort översikt.
 - **Alternativ:** Lämna filen tom; skriva på engelska.
+- **Status:** Gäller
+
+## 2026-10-14 – Visning och rättning av övningar
+- **Beslut:** Alla uppgifter i en övning visas som numrerad lista under "Grammatiska regler". Lucktext och "Svara utifrån kontext" har textfält med label, "Välj rätt" har radioknappar. Knappen "Rätta" rättar alla uppgifter. Rätt visar "✅ Rätt!". Fel visar "❌ Inte riktigt. Försök igen. Rätt svar: ...". Tomt svar visar en påminnelse. En sammanfattning ("Du fick X av Y rätt") visas med en uppmuntrande text. "Börja om" tömmer svar och feedback. Textsvar jämförs utan hänsyn till versaler och extra mellanslag (även mitt i), och flera godkända svar stöds. Svar i "Välj rätt" jämförs exakt, eftersom alternativen kan skilja sig bara på versaler. Inget sparas.
+- **Motivering:** Eleverna ska få direkt, tydlig och vänlig återkoppling utan att något lagras eller skickas.
+- **Alternativ:** Rätta en uppgift i taget; spara poäng i webbläsaren.
 - **Status:** Gäller
