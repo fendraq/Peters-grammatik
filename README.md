@@ -7,6 +7,7 @@ En övningssida i svenska för elever som har svenska som andraspråk. Sidan har
 1. **Lucktext** – eleven fyller i ett ord.
 2. **Välj rätt** – eleven väljer mellan alternativ.
 3. **Svara utifrån kontext** – eleven skriver ett svar utifrån en text eller situation.
+4. **Klicka på rätt ord** (`select-words`) – eleven klickar på ord eller delar av en mening, till exempel alla verb. Meningen ligger som lista i `words` och rätta platser (första platsen är 0) i `answers`.
 
 ## Så fungerar sidan
 

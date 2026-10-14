@@ -200,6 +200,50 @@ main button:hover {
     background: #666;
 }
 
+.words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tasks .words button.word {
+    margin-right: 0;
+    padding: 0.4rem 0.7rem;
+}
+
+.tasks .words button.word[aria-pressed="true"] {
+    background: #1f4f8f;
+    border-color: #ffd54a;
+    border-width: 2px;
+    text-decoration: underline;
+}
+
+.tasks .words button.word .status {
+    display: inline-block;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.tasks .words button.word[data-state="correct"] {
+    background: #1b5e20;
+    border-color: #6cff6c;
+}
+
+.tasks .words button.word[data-state="wrong"] {
+    background: #8e1b1b;
+    border-color: #ff8a8a;
+}
+
+.tasks .words button.word[data-state="missed"] {
+    background: #ffd54a;
+    border: 2px dashed #3d2f00;
+    color: #000;
+}
+
+.word-legend {
+    margin-top: 1.5rem;
+}
+
 .feedback {
     margin-top: 0.4rem;
     font-weight: bold;

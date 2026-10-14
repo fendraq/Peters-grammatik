@@ -71,3 +71,9 @@
 - **Motivering:** Eleverna ska träna på att skriva hela meningar rätt, inte bara välja. Den befintliga typen räcker, så inget i koden behöver ändras.
 - **Alternativ:** Ny övningstyp för att rätta meningar; fri text som rättas av läraren.
 - **Status:** Gäller
+
+## 2026-10-14 – Ny övningstyp "select-words" och övningen "Hitta verben i meningen"
+- **Beslut:** Ny övningstyp `select-words`: eleven klickar på ord i en mening. Fält: `question`, `text` (meningen) och `answers` (lista med de ord som ska markeras). Jämförelsen ignorerar versaler och skiljetecken. Alla ord i meningen som matchar ett svar ska vara markerade, och inga andra. Orden är knappar med `aria-pressed`, så de fungerar med tangentbord och på mobil. Markerade ord visas med ✓, understrykning och ram, inte bara med färg. Rättningen använder samma "Rätta" och "Börja om" som övriga typer. Första övningen är `data/verbs_find_verbs.json` (område Verb, 20 uppgifter) och den är tillagd i `data/index.json`. Mallen `data/_template.json` har ett exempel. Ändrade filer: `js/app.js`, `css/style.css`. Inget sparas i webbläsaren. Typen kan även användas för andra ordklasser och satsdelar.
+- **Motivering:** Eleverna ska träna på att känna igen ordklasser. Spelidén blev en övningstyp, och lagring i webbläsaren väntar.
+- **Alternativ:** Markera ord med hakparenteser i texten (bort valt, eftersom `answers` redan finns i alla typer); ett spel med tid och poäng.
+- **Status:** Ersatt av "select-words" med platser och färgfeedback

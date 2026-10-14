@@ -143,10 +143,93 @@
         };
     }
 
+    function createSelectWordsTask(exercise, number, onChange) {
+        const fieldset = document.createElement("fieldset");
+        const legend = document.createElement("legend");
+        legend.textContent = exercise.question;
+
+        const words = document.createElement("div");
+        words.className = "words";
+
+        const correctPositions = new Set(exercise.answers);
+
+        function isPressed(button) {
+            return button.getAttribute("aria-pressed") === "true";
+        }
+
+        function clearState(button) {
+            delete button.dataset.state;
+            const status = button.querySelector(".status");
+            if (status) {
+                status.remove();
+            }
+        }
+
+        function showState(button, state, label) {
+            clearState(button);
+            button.dataset.state = state;
+            const status = document.createElement("span");
+            status.className = "status";
+            status.textContent = " " + label;
+            button.appendChild(status);
+        }
+
+        const buttons = exercise.words.map(function (word) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "word";
+            button.textContent = word;
+            button.setAttribute("aria-pressed", "false");
+            button.addEventListener("click", function () {
+                button.setAttribute("aria-pressed", String(!isPressed(button)));
+                clearState(button);
+                onChange();
+            });
+            return button;
+        });
+        words.append(...buttons);
+        fieldset.append(legend, words);
+
+        return {
+            element: fieldset,
+            check: function () {
+                let found = 0;
+                let extra = 0;
+                buttons.forEach(function (button, position) {
+                    const shouldBePressed = correctPositions.has(position);
+                    if (isPressed(button) && shouldBePressed) {
+                        found++;
+                        showState(button, "correct", "✓ rätt");
+                    } else if (isPressed(button)) {
+                        extra++;
+                        showState(button, "wrong", "✗ fel");
+                    } else if (shouldBePressed) {
+                        showState(button, "missed", "saknas");
+                    } else {
+                        clearState(button);
+                    }
+                });
+                return {
+                    correct: found === correctPositions.size && extra === 0,
+                    found: found,
+                    total: correctPositions.size,
+                    extra: extra
+                };
+            },
+            reset: function () {
+                buttons.forEach(function (button) {
+                    button.setAttribute("aria-pressed", "false");
+                    clearState(button);
+                });
+            }
+        };
+    }
+
     const taskCreators = {
         "gap-fill": createGapFillTask,
         "multiple-choice": createMultipleChoiceTask,
-        "context-answer": createContextAnswerTask
+        "context-answer": createContextAnswerTask,
+        "select-words": createSelectWordsTask
     };
 
     function createTaskItem(exercise, number) {
@@ -154,9 +237,9 @@
         if (!creator) {
             return null;
         }
-        const task = creator(exercise, number);
         const feedback = document.createElement("p");
         feedback.className = "feedback";
+        const task = creator(exercise, number, function () { setFeedback(feedback, "", ""); });
 
         const item = document.createElement("li");
         item.append(task.element, feedback);
@@ -170,18 +253,27 @@
     }
 
     function checkTask(entry) {
+        if (entry.task.check) {
+            const result = entry.task.check();
+            if (result.correct) {
+                setFeedback(entry.feedback, "correct", "✅ Rätt!");
+            } else {
+                setFeedback(entry.feedback, "wrong", "❌ Inte riktigt. Försök igen.");
+            }
+            return result;
+        }
         const value = entry.task.getValue();
         if (normalizeText(value) === "") {
             setFeedback(entry.feedback, "wrong", "❌ " + entry.task.emptyMessage);
-            return false;
+            return { correct: false };
         }
         if (entry.task.isCorrect(value)) {
             setFeedback(entry.feedback, "correct", "✅ Rätt!");
-            return true;
+            return { correct: true };
         }
         setFeedback(entry.feedback, "wrong",
             "❌ Inte riktigt. Försök igen. Rätt svar: " + entry.answers.join(" eller "));
-        return false;
+        return { correct: false };
     }
 
     function createSummaryText(correctCount, total) {
@@ -195,6 +287,45 @@
         return result + "Bra försök! Läs reglerna och försök igen.";
     }
 
+    function createWordSummaryText(found, total, extra) {
+        let result = "Du hittade " + found + " av " + total + " rätta. ";
+        if (extra > 0) {
+            result += extra + " markeringar blev fel. ";
+        }
+        if (found === total && extra === 0) {
+            return result + "Fantastiskt, du hade allt rätt!";
+        }
+        if (found * 2 >= total) {
+            return result + "Bra jobbat! Titta på de gula och röda orden och försök igen.";
+        }
+        return result + "Bra försök! Läs reglerna och försök igen.";
+    }
+
+    function createSummary(results) {
+        const wordResults = results.filter(function (result) { return result.total !== undefined; });
+        const otherResults = results.filter(function (result) { return result.total === undefined; });
+        const parts = [];
+        if (otherResults.length > 0) {
+            const correctCount = otherResults.filter(function (result) { return result.correct; }).length;
+            parts.push(createSummaryText(correctCount, otherResults.length));
+        }
+        if (wordResults.length > 0) {
+            const sum = function (key) {
+                return wordResults.reduce(function (total, result) { return total + result[key]; }, 0);
+            };
+            parts.push(createWordSummaryText(sum("found"), sum("total"), sum("extra")));
+        }
+        return parts.join(" ");
+    }
+
+    function createWordLegend() {
+        const legend = document.createElement("p");
+        legend.className = "word-legend";
+        legend.textContent = "Klicka på orden och tryck på Rätta. " +
+            "Grön ✓ = rätt. Röd ✗ = fel ord. Gul med streckad ram = saknas (du missade den).";
+        return legend;
+    }
+
     function createExerciseForm(exercises) {
         const form = document.createElement("form");
         form.noValidate = true;
@@ -205,6 +336,7 @@
             .map(function (exercise, index) { return createTaskItem(exercise, index + 1); })
             .filter(function (entry) { return entry !== null; });
         entries.forEach(function (entry) { list.appendChild(entry.item); });
+        const hasWordTasks = exercises.some(function (exercise) { return exercise.type === "select-words"; });
 
         const checkButton = document.createElement("button");
         checkButton.type = "submit";
@@ -220,16 +352,23 @@
 
         form.addEventListener("submit", function (event) {
             event.preventDefault();
-            const correctCount = entries.filter(checkTask).length;
-            summary.textContent = createSummaryText(correctCount, entries.length);
+            summary.textContent = createSummary(entries.map(checkTask));
         });
 
         resetButton.addEventListener("click", function () {
             form.reset();
-            entries.forEach(function (entry) { setFeedback(entry.feedback, "", ""); });
+            entries.forEach(function (entry) {
+                if (entry.task.reset) {
+                    entry.task.reset();
+                }
+                setFeedback(entry.feedback, "", "");
+            });
             summary.textContent = "";
         });
 
+        if (hasWordTasks) {
+            form.appendChild(createWordLegend());
+        }
         form.append(list, checkButton, resetButton, summary);
         return form;
     }
