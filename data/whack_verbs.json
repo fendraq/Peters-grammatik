@@ -1,0 +1,92 @@
+{
+  "title": "Slå verben",
+  "area": "Verb",
+  "rules": [
+    "Ett verb säger vad någon gör eller vad som händer: springer, läser, sover.",
+    "Verb finns i olika former: går, gick, gått.",
+    "Orden är, var, blir och finns är också verb."
+  ],
+  "exercises": [
+    {
+      "type": "whack-words",
+      "instruction": "Slå alla verb.",
+      "targetClass": "verb",
+      "classes": {
+        "verb": { "label": "verb", "explanation": "Ett verb säger vad någon gör eller vad som händer." },
+        "noun": { "label": "substantiv", "explanation": "Ett substantiv är namnet på en sak, en person eller ett djur." },
+        "adjective": { "label": "adjektiv", "explanation": "Ett adjektiv beskriver ett substantiv, till exempel stor eller glad." },
+        "adverb": { "label": "adverb", "explanation": "Ett adverb säger till exempel när eller hur ofta något händer." },
+        "preposition": { "label": "preposition", "explanation": "En preposition visar till exempel var något är: bakom, mellan." }
+      },
+      "words": [
+        { "text": "springer", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "läser", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "skriver", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "äter", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "sover", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "simmar", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "hoppar", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "dansar", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "ritar", "class": "verb", "level": 1, "note": "presens" },
+        { "text": "sjunger", "class": "verb", "level": 1, "note": "presens" },
+
+        { "text": "gick", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "kom", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "tog", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "drack", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "sov", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "skrev", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "läste", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "hoppade", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "simmade", "class": "verb", "level": 2, "note": "preteritum" },
+        { "text": "dansade", "class": "verb", "level": 2, "note": "preteritum" },
+
+        { "text": "gått", "class": "verb", "level": 3, "note": "supinum" },
+        { "text": "ätit", "class": "verb", "level": 3, "note": "supinum" },
+        { "text": "skrivit", "class": "verb", "level": 3, "note": "supinum" },
+        { "text": "sprungit", "class": "verb", "level": 3, "note": "supinum" },
+        { "text": "varit", "class": "verb", "level": 3, "note": "supinum" },
+        { "text": "måste", "class": "verb", "level": 3, "note": "hjälpverb" },
+        { "text": "kunde", "class": "verb", "level": 3, "note": "hjälpverb" },
+        { "text": "blev", "class": "verb", "level": 3, "note": "preteritum" },
+        { "text": "hade", "class": "verb", "level": 3, "note": "preteritum" },
+        { "text": "finns", "class": "verb", "level": 3, "note": "presens" },
+
+        { "text": "bord", "class": "noun", "level": 1 },
+        { "text": "stol", "class": "noun", "level": 1 },
+        { "text": "hund", "class": "noun", "level": 1 },
+        { "text": "katt", "class": "noun", "level": 1 },
+        { "text": "bok", "class": "noun", "level": 1 },
+        { "text": "bil", "class": "noun", "level": 1 },
+        { "text": "äpple", "class": "noun", "level": 1 },
+        { "text": "vatten", "class": "noun", "level": 1 },
+        { "text": "glad", "class": "adjective", "level": 1 },
+        { "text": "stor", "class": "adjective", "level": 1 },
+        { "text": "snabb", "class": "adjective", "level": 1 },
+        { "text": "röd", "class": "adjective", "level": 1 },
+
+        { "text": "hunden", "class": "noun", "level": 2, "note": "bestämd form" },
+        { "text": "katten", "class": "noun", "level": 2, "note": "bestämd form" },
+        { "text": "böckerna", "class": "noun", "level": 2, "note": "bestämd form, plural" },
+        { "text": "huset", "class": "noun", "level": 2, "note": "bestämd form" },
+        { "text": "flickor", "class": "noun", "level": 2, "note": "plural" },
+        { "text": "pojkarna", "class": "noun", "level": 2, "note": "bestämd form, plural" },
+        { "text": "stora", "class": "adjective", "level": 2, "note": "plural" },
+        { "text": "glada", "class": "adjective", "level": 2, "note": "plural" },
+        { "text": "röda", "class": "adjective", "level": 2, "note": "plural" },
+        { "text": "bakom", "class": "preposition", "level": 2 },
+
+        { "text": "snabbare", "class": "adjective", "level": 3, "note": "komparativ" },
+        { "text": "vackra", "class": "adjective", "level": 3, "note": "plural" },
+        { "text": "gamla", "class": "adjective", "level": 3, "note": "plural" },
+        { "text": "ibland", "class": "adverb", "level": 3 },
+        { "text": "aldrig", "class": "adverb", "level": 3 },
+        { "text": "alltid", "class": "adverb", "level": 3 },
+        { "text": "mellan", "class": "preposition", "level": 3 },
+        { "text": "framför", "class": "preposition", "level": 3 },
+        { "text": "fönstren", "class": "noun", "level": 3, "note": "bestämd form, plural" },
+        { "text": "barnen", "class": "noun", "level": 3, "note": "bestämd form, plural" }
+      ]
+    }
+  ]
+}

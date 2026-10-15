@@ -1,6 +1,7 @@
 (function () {
     const menu = document.getElementById("menu");
     const content = document.getElementById("content");
+    let stopGame = null;
 
     async function fetchJson(path) {
         const response = await fetch(path);
@@ -373,7 +374,23 @@
         return form;
     }
 
+    function stopActiveGame() {
+        if (stopGame) {
+            stopGame();
+            stopGame = null;
+        }
+    }
+
+    function showGame(game) {
+        if (!window.WhackWords) {
+            content.appendChild(createMessage("Spelet kunde inte laddas. Försök igen senare."));
+            return;
+        }
+        stopGame = window.WhackWords.mount(content, game);
+    }
+
     function showExercise(exercise) {
+        stopActiveGame();
         const heading = document.createElement("h2");
         heading.textContent = exercise.title;
         heading.tabIndex = -1;
@@ -385,7 +402,12 @@
         if (exercise.rules && exercise.rules.length > 0) {
             content.appendChild(createRules(exercise.rules));
         }
-        content.appendChild(createExerciseForm(exercise.exercises));
+        const game = exercise.exercises.find(function (task) { return task.type === "whack-words"; });
+        if (game) {
+            showGame(game);
+        } else {
+            content.appendChild(createExerciseForm(exercise.exercises));
+        }
         heading.focus();
     }
 
