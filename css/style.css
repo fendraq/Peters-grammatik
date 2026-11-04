@@ -93,7 +93,8 @@ nav button[aria-current="true"]::before {
     content: "▶ ";
 }
 
-nav button.menu-practice {
+nav button.menu-practice,
+nav button.menu-game {
     margin-bottom: 1rem;
     background: #2b2b2b;
     font-weight: bold;
@@ -573,33 +574,38 @@ main .arena-word.wrong-hit:hover {
     display: block;
 }
 
+/* The hammer is drawn with the head at the top, tilted to the left.
+   The pivot (transform-origin) is the lower end of the handle, where
+   the hand grips it. The head's left side lands on the clicked word. */
 .hammer-body {
     position: absolute;
-    left: -22px;
-    top: -70px;
+    left: 27px;
+    top: -30px;
     width: 44px;
     height: 70px;
     transform-origin: 50% 100%;
-    transform: rotate(40deg);
+    transform: rotate(-30deg);
 }
 
+/* Handle: below the head, held by the hand at the bottom. */
 .hammer-body::before {
     content: "";
     position: absolute;
     left: 18px;
-    top: 0;
+    top: 22px;
     width: 8px;
-    height: 56px;
+    height: 48px;
     background: #c68642;
     border: 1px solid #5a3a12;
     border-radius: 3px;
 }
 
+/* Head: at the top, striking face pointing left. */
 .hammer-body::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     width: 44px;
     height: 22px;
     background: #9aa0a6;
@@ -614,6 +620,28 @@ main .arena-word.wrong-hit:hover {
 .game-hint {
     margin-top: 0.75rem;
     color: #ccc;
+}
+
+/* Word class selection screen before the game starts. */
+.game-select {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.game-select-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+.game-select-choice {
+    margin-left: 0.5rem;
+    padding: 0.4rem;
+    background: #2b2b2b;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
 .game-result {
@@ -648,9 +676,9 @@ main .arena-word.wrong-hit:hover {
 }
 
 @keyframes hammer-swing {
-    0% { transform: rotate(40deg); }
-    35% { transform: rotate(-20deg); }
-    100% { transform: rotate(40deg); }
+    0% { transform: rotate(-30deg); }
+    35% { transform: rotate(-65deg); }
+    100% { transform: rotate(-30deg); }
 }
 
 @keyframes confetti-burst {

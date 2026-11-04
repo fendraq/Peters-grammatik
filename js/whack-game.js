@@ -172,8 +172,9 @@
         return section;
     }
 
-    function mount(container, exercise, randomFunction) {
+    function mount(container, exercise, randomFunction, mountOptions) {
         const random = randomFunction || Math.random;
+        const options = mountOptions || {};
         const problem = getProblem(exercise);
         if (problem) {
             container.appendChild(createElement("p", "", problem));
@@ -190,7 +191,7 @@
         const instruction = createElement(
             "p",
             "game-instruction",
-            (exercise.instruction || "Slå alla " + targetLabel + ".") + " Försök få så hög poäng som möjligt."
+            (exercise.instruction || "Banka alla " + targetLabel + ".") + " Försök få så hög poäng som möjligt."
         );
 
         const scoreText = createElement("span");
@@ -344,17 +345,23 @@
                 "h3",
                 "",
                 status === "won"
-                    ? "Bra jobbat! Du slog " + RULES.winHits + " rätta ord."
+                    ? "Bra jobbat! Du bankade " + RULES.winHits + " rätta ord."
                     : "Spelet är slut. Du fick " + RULES.maxFails + " fel."
             );
             heading.tabIndex = -1;
             result.replaceChildren(
                 heading,
                 createElement("p", "game-final-score", "Din poäng: " + state.score),
-                createWordList(exercise, "Rätt slagna ord", state.hitWords, false, "Inga."),
+                createWordList(exercise, "Rätt bankade ord", state.hitWords, false, "Inga."),
                 createWordList(exercise, "Rätta ord du missade", state.missedWords, true, "Inga. Bra!"),
-                createWordList(exercise, "Fel ord du slog på", state.wrongWords, true, "Inga. Bra!")
+                createWordList(exercise, "Fel ord du bankade på", state.wrongWords, true, "Inga. Bra!")
             );
+            if (options && options.onChangeClass) {
+                const changeButton = createElement("button", "", "Byt ordklass");
+                changeButton.type = "button";
+                changeButton.addEventListener("click", options.onChangeClass);
+                result.appendChild(changeButton);
+            }
             result.hidden = false;
             heading.focus();
         }
@@ -611,8 +618,12 @@
         window.addEventListener("resize", clampWords);
 
         updateHud();
-        setPhase("ready");
-        showOverlay("Redo? Slå rätt ord så fort du kan.", "Starta");
+        if (options.autoStart) {
+            startGame();
+        } else {
+            setPhase("ready");
+            showOverlay("Redo? Banka rätt ord så fort du kan.", "Starta");
+        }
 
         return function destroy() {
             stopLoop();
@@ -626,5 +637,117 @@
         };
     }
 
-    window.WhackWords = { mount: mount, logic: logic, rules: RULES };
+    // Start screen for the game: choose a word class, then play.
+    // gameData has { title, lists: [{ label, targetClass, instruction,
+    // rules, classes, words }] } – see data/whack_words.json.
+    function buildExercise(list) {
+        return {
+            type: "whack-words",
+            instruction: list.instruction,
+            targetClass: list.targetClass,
+            classes: list.classes,
+            words: list.words
+        };
+    }
+
+    function mountSelect(container, gameData, randomFunction) {
+        const lists = Array.isArray(gameData.lists) ? gameData.lists : [];
+        if (lists.length === 0) {
+            container.appendChild(createElement("p", "", "Spelet har inga ordlistor än."));
+            return function () {};
+        }
+
+        const root = createElement("section", "game-select");
+        const heading = createElement("h2", "", gameData.title || "Banka ordet");
+        const intro = createElement(
+            "p",
+            "",
+            "Välj en ordklass. Banka sedan alla ord som tillhör den. Försök få så hög poäng som möjligt."
+        );
+
+        const label = createElement("label", "game-select-label", "Ordklass:");
+        const select = document.createElement("select");
+        select.className = "game-select-choice";
+        lists.forEach(function (list, index) {
+            const option = document.createElement("option");
+            option.value = String(index);
+            option.textContent = list.label;
+            select.appendChild(option);
+        });
+        label.appendChild(select);
+
+        const warning = createElement("p", "", "");
+        const rulesBox = createElement("div");
+        const startButton = createElement("button", "", "Starta spelet");
+        startButton.type = "button";
+
+        function selectedList() {
+            const index = Number(select.value);
+            return Number.isInteger(index) && lists[index] ? lists[index] : lists[0];
+        }
+
+        function renderRules() {
+            const list = selectedList();
+            rulesBox.replaceChildren();
+            if (Array.isArray(list.rules) && list.rules.length > 0) {
+                const details = createElement("details", "rules");
+                const summary = createElement("summary", "", "Grammatiska regler");
+                const listElement = document.createElement("ul");
+                list.rules.forEach(function (rule) {
+                    const item = document.createElement("li");
+                    item.textContent = rule;
+                    listElement.appendChild(item);
+                });
+                details.append(summary, listElement);
+                rulesBox.appendChild(details);
+            }
+            const problem = getProblem(buildExercise(list));
+            warning.textContent = problem;
+            startButton.disabled = Boolean(problem);
+        }
+
+        let gameDestroy = null;
+
+        function showSelection() {
+            if (gameDestroy) {
+                gameDestroy();
+                gameDestroy = null;
+            }
+            root.replaceChildren(heading, intro, label, warning, rulesBox, startButton);
+        }
+
+        function start() {
+            const list = selectedList();
+            if (getProblem(buildExercise(list))) {
+                return;
+            }
+            if (gameDestroy) {
+                gameDestroy();
+                gameDestroy = null;
+            }
+            const holder = createElement("div");
+            root.replaceChildren(heading, holder);
+            gameDestroy = mount(holder, buildExercise(list), randomFunction, {
+                autoStart: true,
+                onChangeClass: showSelection
+            });
+        }
+
+        select.addEventListener("change", renderRules);
+        startButton.addEventListener("click", start);
+
+        renderRules();
+        showSelection();
+        container.appendChild(root);
+
+        return function destroy() {
+            if (gameDestroy) {
+                gameDestroy();
+                gameDestroy = null;
+            }
+            root.remove();
+        };
+    }
+
+    window.WhackWords = { mount: mount, mountSelect: mountSelect, logic: logic, rules: RULES };
 })();

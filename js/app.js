@@ -3,8 +3,8 @@
     const content = document.getElementById("content");
     let stopGame = null;
 
-    async function fetchJson(path) {
-        const response = await fetch(path);
+    async function fetchJson(path, options) {
+        const response = await fetch(path, options || {});
         if (!response.ok) {
             throw new Error(path + ": " + response.status);
         }
@@ -387,12 +387,30 @@
         }
     }
 
-    function showGame(game) {
+    let gameDataPromise = null;
+
+    function loadGameData() {
+        if (!gameDataPromise) {
+            gameDataPromise = fetchJson("data/whack_words.json", { cache: "no-cache" })
+                .catch(function (error) {
+                    gameDataPromise = null;
+                    throw error;
+                });
+        }
+        return gameDataPromise;
+    }
+
+    function showGameView() {
+        stopActiveGame();
         if (!window.WhackWords) {
-            content.appendChild(createMessage("Spelet kunde inte laddas. Försök igen senare."));
+            content.replaceChildren(createMessage("Spelet kunde inte laddas. Försök igen senare."));
             return;
         }
-        stopGame = window.WhackWords.mount(content, game);
+        loadGameData().then(function (gameData) {
+            stopGame = window.WhackWords.mountSelect(content, gameData);
+        }).catch(function () {
+            content.replaceChildren(createMessage("Spelet kunde inte laddas. Försök igen senare."));
+        });
     }
 
     function showExercise(exercise) {
@@ -408,12 +426,7 @@
         if (exercise.rules && exercise.rules.length > 0) {
             content.appendChild(createRules(exercise.rules));
         }
-        const game = exercise.exercises.find(function (task) { return task.type === "whack-words"; });
-        if (game) {
-            showGame(game);
-        } else {
-            content.appendChild(createExerciseForm(exercise.exercises));
-        }
+        content.appendChild(createExerciseForm(exercise.exercises));
         heading.focus();
     }
 
@@ -458,6 +471,18 @@
         return button;
     }
 
+    function createGameItem() {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "menu-game";
+        button.textContent = "Spel";
+        button.addEventListener("click", function () {
+            markSelected(button);
+            showGameView();
+        });
+        return button;
+    }
+
     function createAreaSection(areaName, exercises) {
         const details = document.createElement("details");
 
@@ -491,6 +516,7 @@
             menu.appendChild(createAreaSection(areaName, exercises));
         });
         menu.appendChild(createPracticeItem());
+        menu.appendChild(createGameItem());
         if (failedCount > 0) {
             menu.appendChild(createMessage("Några övningar kunde inte laddas."));
         }
