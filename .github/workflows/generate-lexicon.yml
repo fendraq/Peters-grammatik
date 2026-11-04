@@ -1,0 +1,43 @@
+name: Generate LEXIN lexicon
+
+# Converts the LEXIN XML (Svenska ord, 4th ed., CC BY 4.0) to
+# data/lexicon.json. Runs automatically when the workflow or the
+# converter script changes on the word-comprehension branch, and
+# can be run manually from the Actions tab.
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - word-comprehension
+    paths:
+      - ".github/workflows/generate-lexicon.yml"
+      - "scripts/convert_lexicon.py"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Download LEXIN XML
+        run: curl -fsSL --retry 3 -o swe_swe.xml "https://sprakresurser.isof.se/lexin/svenska/swe_swe.xml"
+
+      - name: Convert XML to JSON
+        run: python3 scripts/convert_lexicon.py swe_swe.xml data/lexicon.json
+
+      - name: Commit the lexicon
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/lexicon.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Regenerate data/lexicon.json from LEXIN XML"
+            git push
+          fi
