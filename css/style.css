@@ -150,6 +150,24 @@ main h2 {
     line-height: 1.6;
 }
 
+/* A small "?" circle after a task sentence. The tip shows on hover
+   (and on keyboard focus) via the title tooltip. */
+.hint-symbol {
+    display: inline-block;
+    box-sizing: content-box;
+    width: 0.95em;
+    height: 0.95em;
+    margin-left: 0.4rem;
+    padding: 0.05em;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    line-height: 0.95;
+    text-align: center;
+    font-size: 0.8em;
+    cursor: help;
+    user-select: none;
+}
+
 .tasks fieldset {
     border: none;
 }

@@ -105,3 +105,8 @@
 - **Motivering:** Spelet ska träna alla ordklasser, inte bara verb, och eleven ska själv välja vad som ska tränas. Hammaren såg upp och ned ut tidigare.
 - **Alternativ:** Ett spel per ordklass i menyn (bort valt: menyn blir full); behålla "slå"-texterna (bort valt för att undvika våldsord); behålla hammaren som den var (bort valt).
 - **Status:** Gäller
+## 2026-11-04 – Tips-symbol (?) för lucktexter och enklare övning "Bindeord i debattext"
+- **Beslut:** Lucktexter kan ha ett valfritt fält `hint`. Tipset visas som ett ?-tecken i en cirkel efter meningen och syns när eleven hovrar över symbolen (eller fokuserar den med tangentbordet). Övningen "Bindeord i debattext" är samtidigt lättare att förstå: de åtta luckmeningarna är ordnade som en kort debattartikel som läses som en text, varje lucka har ett tips som förklarar vilket slags bindeord som ska skrivas, och den sista luckan ("Sammanfattningsvis") godtar också svaren avslutningsvis, slutligen och till sist. En ny regel förklarar att uppgift 1–8 är en debattartikel.
+- **Motivering:** Övningen var otydlig: meningen var oklar och eleven fick ingen ledning om vad som skulle skrivas i rutan. Läraren ville ha en sammanhängande text, tips per lucka och fler godtagbara svar på avslutningsordet.
+- **Alternativ:** Tipsen hade kunnat stå i parentes direkt i meningen (bort valt: användaren ville ha en förklaringssymbol), och luckmeningarna hade kunnat vara kvar i slumpad ordning (bort valt: de ska läsas som en text).
+- **Status:** Gäller

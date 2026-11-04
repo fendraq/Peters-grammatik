@@ -88,12 +88,28 @@
         return { label: label, input: input };
     }
 
+    // A small "?" circle after a task sentence. The tip text shows
+    // in a tooltip when the student hovers or focuses the symbol.
+    function createHintSymbol(hint) {
+        const symbol = document.createElement("span");
+        symbol.className = "hint-symbol";
+        symbol.textContent = "?";
+        symbol.title = hint;
+        symbol.tabIndex = 0;
+        symbol.setAttribute("role", "note");
+        symbol.setAttribute("aria-label", "Tips: " + hint);
+        return symbol;
+    }
+
     function createGapFillTask(exercise, number) {
         const parts = exercise.text.split("____");
         const field = createTextInput("Svar till uppgift " + number);
 
         const sentence = document.createElement("p");
         sentence.append(parts[0], field.label, parts.slice(1).join(""));
+        if (exercise.hint) {
+            sentence.appendChild(createHintSymbol(exercise.hint));
+        }
 
         return {
             element: sentence,
