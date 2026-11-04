@@ -411,6 +411,15 @@
         heading.focus();
     }
 
+    function showPractice() {
+        stopActiveGame();
+        if (window.WordExercise) {
+            window.WordExercise.mountPractice(content);
+        } else {
+            content.replaceChildren(createMessage("Övningen kunde inte laddas. Försök igen senare."));
+        }
+    }
+
     function markSelected(button) {
         menu.querySelectorAll("button[aria-current]").forEach(function (other) {
             other.removeAttribute("aria-current");
@@ -429,6 +438,18 @@
         });
         item.appendChild(button);
         return item;
+    }
+
+    function createPracticeItem() {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "menu-practice";
+        button.textContent = "Öva ordförståelse";
+        button.addEventListener("click", function () {
+            markSelected(button);
+            showPractice();
+        });
+        return button;
     }
 
     function createAreaSection(areaName, exercises) {
@@ -455,7 +476,7 @@
     function renderMenu(groups, failedCount) {
         const heading = document.createElement("h2");
         heading.textContent = "Områden";
-        menu.replaceChildren(heading);
+        menu.replaceChildren(heading, createPracticeItem());
 
         if (groups.size === 0) {
             menu.appendChild(createMessage("Det finns inga övningar än."));
@@ -474,6 +495,9 @@
             renderMenu(groupByArea(loaded.exercises), loaded.failedCount);
         } catch (error) {
             menu.replaceChildren(createMessage("Övningarna kunde inte laddas. Försök igen senare."));
+        }
+        if (window.WordExercise) {
+            window.WordExercise.mountDaily(content);
         }
     }
 

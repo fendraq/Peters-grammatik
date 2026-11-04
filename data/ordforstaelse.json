@@ -1,0 +1,59 @@
+{
+  "title": "Öva ordförståelse",
+  "area": "Ordförråd",
+  "rules": [
+    "Läs meningen under ordet. Meningen visar vad ordet betyder.",
+    "Välj den förklaring som passar ordet.",
+    "Välj sedan vilken ordklass ordet tillhör, till exempel substantiv eller verb."
+  ],
+  "words": [
+    {
+      "word": "kryptera",
+      "example": "bankens webbsidor för betalningar är krypterade",
+      "definition": "gör om klartext till kod",
+      "pos": "verb"
+    },
+    {
+      "word": "granska",
+      "example": "översättningen granskades av en språkexpert",
+      "definition": "undersöker noga, går igenom",
+      "pos": "verb"
+    },
+    {
+      "word": "motivera",
+      "example": "man motiverar betygen med att de behövs som urvalsinstrument",
+      "definition": "anger skäl för",
+      "pos": "verb"
+    },
+    {
+      "word": "resonera",
+      "example": "Vi kan väl sätta oss och resonera om saken, så kanske vi hittar en lösning!",
+      "definition": "diskuterar (med någon) i samförstånd",
+      "pos": "verb"
+    },
+    {
+      "word": "förslag",
+      "example": "Mitt förslag är att vi träffas den 4 mars klockan 13!",
+      "definition": "idé, plan",
+      "pos": "subst."
+    },
+    {
+      "word": "belägg",
+      "example": "han saknade belägg för sina påståenden",
+      "definition": "bevis; exempel",
+      "pos": "subst."
+    },
+    {
+      "word": "risk",
+      "example": "Risk för ras!",
+      "definition": "möjlighet att något går illa",
+      "pos": "subst."
+    },
+    {
+      "word": "schema",
+      "example": "klassen har ett bra schema med en ledig eftermiddag",
+      "definition": "tidsplan för något regelbundet återkommande",
+      "pos": "subst."
+    }
+  ]
+}
