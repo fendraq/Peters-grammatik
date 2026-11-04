@@ -54,6 +54,12 @@
       "example": "klassen har ett bra schema med en ledig eftermiddag",
       "definition": "tidsplan för något regelbundet återkommande",
       "pos": "subst."
+    },
+    {
+      "word": "situation",
+      "example": "landets ekonomiska situation är besvärlig",
+      "definition": "läge, tillstånd",
+      "pos": "subst."
     }
   ]
 }
