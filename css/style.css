@@ -13,6 +13,7 @@ body {
 }
 
 header {
+    position: relative;
     background: #111;
     text-align: center;
     padding: 2rem;
@@ -21,6 +22,14 @@ header {
 
 header h1 {
     margin-bottom: 0.5rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+h2:focus-visible {
+    outline: 3px solid #ffd54a;
+    outline-offset: 2px;
 }
 
 .layout {
@@ -84,12 +93,10 @@ nav button[aria-current="true"]::before {
     content: "▶ ";
 }
 
-a:focus-visible,
-button:focus-visible,
-summary:focus-visible,
-h2:focus-visible {
-    outline: 3px solid #ffd54a;
-    outline-offset: 2px;
+nav button.menu-practice {
+    margin-bottom: 1rem;
+    background: #2b2b2b;
+    font-weight: bold;
 }
 
 main {
@@ -200,6 +207,11 @@ main button:hover {
     background: #666;
 }
 
+main button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
 .words {
     display: flex;
     flex-wrap: wrap;
@@ -262,6 +274,126 @@ main button:hover {
     font-size: 1.25rem;
     font-weight: bold;
 }
+
+/* ----- Veckans ord and Öva ordförståelse ----- */
+
+.word-card {
+    max-width: 42rem;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.word-card h3.word-headline {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.word-card blockquote {
+    border: none;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+.word-card fieldset {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.word-card legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.word-card label {
+    display: block;
+    padding: 0.4rem 0.25rem;
+    line-height: 1.5;
+}
+
+.word-card input[type="radio"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: 0.4rem;
+}
+
+.word-card .feedback {
+    text-align: left;
+}
+
+.hint {
+    color: #ccc;
+    margin-top: 0.4rem;
+}
+
+/* ----- Admin (hidden teacher area) ----- */
+
+.admin-door {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    color: #000;
+    padding: 0.25rem 0.5rem;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.admin-door:hover,
+.admin-door:focus-visible {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.admin-field {
+    display: block;
+    margin: 1rem 0;
+    max-width: 40rem;
+    text-align: left;
+}
+
+.admin-field span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+}
+
+.admin-field input,
+.admin-field select {
+    width: 100%;
+    background: #222;
+    color: #fff;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 0.4rem 0.6rem;
+    font: inherit;
+}
+
+.admin-field input.wide {
+    max-width: 40rem;
+}
+
+.admin-result {
+    margin: 1rem 0;
+}
+
+.admin-result button.admin-choice {
+    display: block;
+    width: 100%;
+    max-width: 40rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+/* ----- Game "Slå rätt ord" ----- */
 
 .game-instruction {
     font-size: 1.4rem;
