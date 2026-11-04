@@ -59,6 +59,12 @@
         return text.normalize("NFC").trim().replace(/\s+/g, " ").toLocaleLowerCase("sv");
     }
 
+    // Step labels like "(steg 2)" are kept in the data files but
+    // never shown to students in the menu or on the exercise page.
+    function displayTitle(title) {
+        return String(title).replace(/\s*\([^)]*steg[^)]*\)\s*$/i, "").trim();
+    }
+
     function matchesText(value, answers) {
         const normalized = normalizeText(value);
         return normalized !== "" && answers.some(function (answer) {
@@ -392,7 +398,7 @@
     function showExercise(exercise) {
         stopActiveGame();
         const heading = document.createElement("h2");
-        heading.textContent = exercise.title;
+        heading.textContent = displayTitle(exercise.title);
         heading.tabIndex = -1;
 
         const area = document.createElement("p");
@@ -431,7 +437,7 @@
         const item = document.createElement("li");
         const button = document.createElement("button");
         button.type = "button";
-        button.textContent = exercise.title;
+        button.textContent = displayTitle(exercise.title);
         button.addEventListener("click", function () {
             markSelected(button);
             showExercise(exercise);
