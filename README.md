@@ -8,22 +8,27 @@ En övningssida i svenska för elever som har svenska som andraspråk. Sidan har
 2. **Välj rätt** – eleven väljer mellan alternativ.
 3. **Svara utifrån kontext** – eleven skriver ett svar utifrån en text eller situation.
 4. **Klicka på rätt ord** (`select-words`) – eleven klickar på ord eller delar av en mening, till exempel alla verb. Meningen ligger som lista i `words` och rätta platser (första platsen är 0) i `answers`.
-5. **Slå rätt ord** (`whack-words`) – ett spel där ord dyker upp på slumpade platser och eleven slår på rätt ordklass, som i "Whack-a-mole". Se nedan.
+5. **Banka ordet** (`whack-words`) – ett spel där ord dyker upp på slumpade platser och eleven bankar på rätt ordklass, som i "Whack-a-mole". Spelet har en egen menypost, "Spel". Se nedan.
 6. **Ordförståelse** (`word-comprehension`) – se nedan.
 
-## Spelet "Slå rätt ord"
+## Spelet "Banka ordet"
 
+Spelet ligger under menyposten **Spel** (inte under något grammatikområde).
+
+- På startskärmen väljer eleven ordklass i en rullgardinsmeny: Pronomen, Substantiv, Verb eller Adjektiv. Reglerna för vald ordklass visas på startskärmen.
 - Rätt ord ger +10 poäng, fel ord −10 poäng och ett missat rätt ord 0 poäng. Poängen kan bli negativ.
 - Spelet startar långsamt och går fortare för varje rätt träff. Orden blir också svårare i tre nivåer.
 - Spelet slutar vid 20 rätta träffar eller 10 fel (missade rätta ord och träffar på fel ord).
-- Slutskärmen visar alla rätt slagna, missade och felslagna ord med ordklass och en kort förklaring.
+- Slutskärmen visar alla rätt bankade, missade och felbankade ord med ordklass och en kort förklaring, samt knappen "Byt ordklass".
 - Fungerar med mus, touch och tangentbord (siffrorna 1–4). Spelet pausar när fliken eller fönstret tappar fokus.
-- En speldatafil har samma fält som andra övningsfiler (`title`, `area`, `rules`) och `exercises` med en enda uppgift av typen `whack-words`:
-  - `instruction` – instruktion, till exempel "Slå alla verb."
-  - `targetClass` – id för ordklassen som ska slås, till exempel `verb`.
+- Spelets data ligger i `data/whack_words.json`: `title`, `area` och `lists` med en lista per ordklass:
+  - `label` – namnet i rullgardinsmenyn.
+  - `instruction` – instruktion, till exempel "Banka alla verb."
+  - `targetClass` – id för ordklassen som ska bankas, till exempel `verb`.
+  - `rules` – ordklassens grammatiska regler, visas på startskärmen.
   - `classes` – ordklasser med `label` (namn) och `explanation` (kort förklaring som visas på slutskärmen).
-  - `words` – ord med `text`, `class` (id från `classes`), `level` (1–3, valfritt, standard 1) och `note` (valfri, till exempel "preteritum"). Minst 5 rätta och 5 fel ord behövs. Använd bara ord som tydligt tillhör en ordklass.
-- Ett nytt spel, till exempel "Slå substantiven", läggs till som en ny JSON-fil i `data/` och i `data/index.json`. Ingen kodändring behövs.
+  - `words` – ord med `text`, `class` (id från `classes`), `level` (1–3, valfritt, standard 1) och `note` (valfri, till exempel "preteritum"). Minst 5 rätta och 5 fel ord behövs per lista. Använd bara ord som tydligt tillhör en ordklass.
+- En ny ordklass läggs till som ett nytt objekt i `lists`. Ingen kodändring behövs.
 
 ## Ordförståelse: "Veckans ord" och "Öva ordförståelse"
 
@@ -64,8 +69,8 @@ En övningssida i svenska för elever som har svenska som andraspråk. Sidan har
 | `js/word-exercise.js` | Kod för "Veckans ord" och "Öva ordförståelse" |
 | `js/admin.js` | Kod för lärarinloggning och "Lägg till nytt ord" |
 | `js/admin-config.json` | Användarnamn och lösenordshash för lärarinloggningen |
-| `js/whack-game.js` | Kod för spelet "Slå rätt ord" |
-| `data/` | Övningar i JSON-format. `_template.json` är en mall och `index.json` listar övningsfilerna. `ordforstaelse.json` är ordlistan för ordförståelse och `lexicon.json` är ordbasen från LEXIN |
+| `js/whack-game.js` | Kod för spelet "Banka ordet" |
+| `data/` | Övningar i JSON-format. `_template.json` är en mall och `index.json` listar övningsfilerna. `ordforstaelse.json` är ordlistan för ordförståelse, `whack_words.json` är spelets ordlistor och `lexicon.json` är ordbasen från LEXIN |
 | `scripts/convert_lexicon.py` | Konverterar LEXIN XML till `data/lexicon.json` |
 | `text-analysis.md` | Felanalys av elevtexter som underlag för nya övningar |
 | `AGENTS.md` | Regler för AI-agenter som arbetar i repot |

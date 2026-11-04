@@ -98,3 +98,10 @@
 - **Motivering:** Nya ord ska kunna läggas till direkt på sidan utan server, och LEXIN är en pedagogisk ordbok gjord för sva-elever med fritt licensierade data som får ligga i ett publikt repo.
 - **Alternativ:** Serverlös SQL-databas utanför GitHub (bort valt: extern tjänst, integritet, bryter repo-reglerna); manuellt commit via GitHub-webben (kvar som reservlösning om token saknas); LEXIN 2:a upplagan (bort valt på grund av licensen).
 - **Status:** Gäller
+
+## 2026-11-04 – Spelet byter namn till "Banka ordet" och får egen menypost med ordklassval
+- **Beslut:** Spelet heter nu "Banka ordet" och ligger under en egen menypost, "Spel", i stället för under Verb. Alla texter i spelet är ändrade från "slå" till "banka" ("Banka rätt ord", "Rätt bankade ord", "Fel ord du bankade på"). På startskärmen väljer eleven ordklass i en rullgardinsmeny (Ordklass:) bland Pronomen, Substantiv, Verb och Adjektiv, ser ordklassens regler och startar med knappen "Starta spelet". Efter avslutat spel finns knappen "Byt ordklass" som tar tillbaka till startskärmen. Speldata ligger i `data/whack_words.json` med en lista per ordklass (`label`, `instruction`, `targetClass`, `rules`, `classes`, `words`); verborden är de tidigare från `data/whack_verbs.json`, som är borttagen. Nya listor för pronomen, substantiv och adjektiv följer verblistans mönster: vanliga ord, grundform på nivå 1 och fler böjningar på nivå 2–3.
+- **Beslut (hammaren):** Spelets hammare är ritad om: hammarhuvudet är nu högst upp och pekar åt vänster (tidigare var hammaren upp och ned), och träffen sker vid hammarhuvudets vänstra sida. Hammaren roterar kring underdelen av skaftet.
+- **Motivering:** Spelet ska träna alla ordklasser, inte bara verb, och eleven ska själv välja vad som ska tränas. Hammaren såg upp och ned ut tidigare.
+- **Alternativ:** Ett spel per ordklass i menyn (bort valt: menyn blir full); behålla "slå"-texterna (bort valt för att undvika våldsord); behålla hammaren som den var (bort valt).
+- **Status:** Gäller
