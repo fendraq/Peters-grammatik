@@ -28,8 +28,8 @@
     var lexiconPromise = null;
     var wordListPromise = null;
 
-    function fetchJson(path) {
-        return fetch(path).then(function (response) {
+    function fetchJson(path, options) {
+        return fetch(path, options || {}).then(function (response) {
             if (!response.ok) {
                 throw new Error(path + ": " + response.status);
             }
@@ -49,7 +49,9 @@
 
     function loadWordList() {
         if (!wordListPromise) {
-            wordListPromise = fetchJson("data/ordforstaelse.json");
+            // The word list is small and changes when the teacher adds words,
+            // so always revalidate it instead of trusting the browser cache.
+            wordListPromise = fetchJson("data/ordforstaelse.json", { cache: "no-cache" });
         }
         return wordListPromise;
     }
