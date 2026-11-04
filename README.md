@@ -4,7 +4,7 @@ En övningssida i svenska för elever som har svenska som andraspråk. Sidan har
 
 ## Övningstyper
 
-1. **Lucktext** – eleven fyller i ett ord.
+1. **Lucktext** – eleven fyller i ett ord. En lucktext kan ha fältet `hint`: då visas ett ?-tecken i en cirkel efter meningen, och tipset syns när eleven hovrar över det (eller fokuserar det med tangentbordet).
 2. **Välj rätt** – eleven väljer mellan alternativ.
 3. **Svara utifrån kontext** – eleven skriver ett svar utifrån en text eller situation.
 4. **Klicka på rätt ord** (`select-words`) – eleven klickar på ord eller delar av en mening, till exempel alla verb. Meningen ligger som lista i `words` och rätta platser (första platsen är 0) i `answers`.
