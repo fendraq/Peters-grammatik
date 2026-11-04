@@ -233,23 +233,32 @@
         return forms;
     }
 
-    // Put citation quotes around the exercise word inside the example
-    // sentence, so the student can tell it apart from the rest of the text.
-    function markWordInExample(entry, lexicon) {
+    // Build the example sentence with the exercise word in italics,
+    // so the student can tell it apart from the rest of the sentence.
+    function appendExampleSentence(container, entry, lexicon) {
         var sentence = String(entry.example || "");
-        if (!lexicon || !sentence) {
-            return sentence;
-        }
-        var forms = collectWordForms(entry, lexicon);
-        for (var i = 0; i < forms.length; i++) {
-            var index = findWholeWord(sentence, forms[i]);
-            if (index !== -1) {
-                return sentence.slice(0, index) + "\u201C" +
-                    sentence.slice(index, index + forms[i].length) + "\u201D" +
-                    sentence.slice(index + forms[i].length);
+        var marked = null;
+        if (lexicon) {
+            var forms = collectWordForms(entry, lexicon);
+            for (var i = 0; i < forms.length; i++) {
+                var index = findWholeWord(sentence, forms[i]);
+                if (index !== -1) {
+                    marked = { start: index, length: forms[i].length };
+                    break;
+                }
             }
         }
-        return sentence;
+        if (!marked) {
+            container.appendChild(document.createTextNode(sentence));
+            return;
+        }
+        var em = document.createElement("em");
+        em.textContent = sentence.slice(marked.start, marked.start + marked.length);
+        container.append(
+            document.createTextNode(sentence.slice(0, marked.start)),
+            em,
+            document.createTextNode(sentence.slice(marked.start + marked.length))
+        );
     }
 
     function createWordCard(container, entry, lexicon, options) {
@@ -262,7 +271,7 @@
         card.appendChild(headline);
 
         var example = document.createElement("blockquote");
-        example.textContent = markWordInExample(entry, lexicon);
+        appendExampleSentence(example, entry, lexicon);
         card.appendChild(example);
 
         var definitionOptions = lexicon ? buildDefinitionOptions(entry, lexicon) : null;
@@ -272,7 +281,7 @@
         if (definitionOptions) {
             definitionGroup = createOptionGroup(
                 "definition",
-                "Välj förklaringen som passar " + entry.word + ":",
+                "Välj förklaringen som passar \u201C" + entry.word + "\u201D:",
                 definitionOptions
             );
             card.append(definitionGroup, definitionFeedback);
@@ -286,7 +295,7 @@
         var posOptions = buildPosOptions(entry);
         var posGroup = createOptionGroup(
             "pos",
-            "Välj vilken ordklass som " + entry.word + " tillhör:",
+            "Välj vilken ordklass som \u201C" + entry.word + "\u201D tillhör:",
             posOptions
         );
         var posFeedback = document.createElement("p");
