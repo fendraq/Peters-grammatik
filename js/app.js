@@ -402,6 +402,8 @@
 
     function showGameView() {
         stopActiveGame();
+        // The game replaces whatever is shown, like the exercises do.
+        content.replaceChildren();
         if (!window.WhackWords) {
             content.replaceChildren(createMessage("Spelet kunde inte laddas. Försök igen senare."));
             return;
