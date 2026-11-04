@@ -476,7 +476,7 @@
     function renderMenu(groups, failedCount) {
         const heading = document.createElement("h2");
         heading.textContent = "Områden";
-        menu.replaceChildren(heading, createPracticeItem());
+        menu.replaceChildren(heading);
 
         if (groups.size === 0) {
             menu.appendChild(createMessage("Det finns inga övningar än."));
@@ -484,6 +484,7 @@
         groups.forEach(function (exercises, areaName) {
             menu.appendChild(createAreaSection(areaName, exercises));
         });
+        menu.appendChild(createPracticeItem());
         if (failedCount > 0) {
             menu.appendChild(createMessage("Några övningar kunde inte laddas."));
         }
