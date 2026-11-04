@@ -189,6 +189,78 @@
         element.textContent = text;
     }
 
+    function isWordCharacter(character) {
+        return character !== "" && /[0-9A-Za-zÀ-ÿ]/.test(character);
+    }
+
+    // Find "form" in "sentence" as a whole word, not inside a longer word.
+    // Returns the index of the first match, or -1.
+    function findWholeWord(sentence, form) {
+        var lower = sentence.toLocaleLowerCase("sv");
+        var target = form.toLocaleLowerCase("sv");
+        var index = lower.indexOf(target);
+        while (index !== -1) {
+            var before = index === 0 ? "" : sentence.charAt(index - 1);
+            var after = index + target.length >= sentence.length ? "" : sentence.charAt(index + target.length);
+            if (!isWordCharacter(before) && !isWordCharacter(after)) {
+                return index;
+            }
+            index = lower.indexOf(target, index + 1);
+        }
+        return -1;
+    }
+
+    // All known word forms of the exercise word (base form, inflections and
+    // index forms from the lexicon), so "kryptera" also matches
+    // "krypterade" in an example sentence.
+    function collectWordForms(entry, lexicon) {
+        var forms = [entry.word];
+        var add = function (form) {
+            if (form && form.length >= 3 && !/[:\s]/.test(form) && forms.indexOf(form) === -1) {
+                forms.push(form);
+            }
+        };
+        lexicon.forEach(function (lexEntry) {
+            var isMatch = lexEntry.word === entry.word ||
+                (lexEntry.idx && lexEntry.idx.indexOf(entry.word) !== -1);
+            if (isMatch) {
+                (lexEntry.infl || []).forEach(add);
+                (lexEntry.idx || []).forEach(add);
+            }
+        });
+        // Longest form first: "krypterade" should win over "kryptera".
+        forms.sort(function (a, b) { return b.length - a.length; });
+        return forms;
+    }
+
+    // Build the example sentence with the exercise word in italics,
+    // so the student can tell it apart from the rest of the sentence.
+    function appendExampleSentence(container, entry, lexicon) {
+        var sentence = String(entry.example || "");
+        var marked = null;
+        if (lexicon) {
+            var forms = collectWordForms(entry, lexicon);
+            for (var i = 0; i < forms.length; i++) {
+                var index = findWholeWord(sentence, forms[i]);
+                if (index !== -1) {
+                    marked = { start: index, length: forms[i].length };
+                    break;
+                }
+            }
+        }
+        if (!marked) {
+            container.appendChild(document.createTextNode(sentence));
+            return;
+        }
+        var em = document.createElement("em");
+        em.textContent = sentence.slice(marked.start, marked.start + marked.length);
+        container.append(
+            document.createTextNode(sentence.slice(0, marked.start)),
+            em,
+            document.createTextNode(sentence.slice(marked.start + marked.length))
+        );
+    }
+
     function createWordCard(container, entry, lexicon, options) {
         var card = document.createElement("section");
         card.className = "word-card";
@@ -199,7 +271,7 @@
         card.appendChild(headline);
 
         var example = document.createElement("blockquote");
-        example.textContent = "\u201C" + entry.example + "\u201D";
+        appendExampleSentence(example, entry, lexicon);
         card.appendChild(example);
 
         var definitionOptions = lexicon ? buildDefinitionOptions(entry, lexicon) : null;
@@ -209,7 +281,7 @@
         if (definitionOptions) {
             definitionGroup = createOptionGroup(
                 "definition",
-                "Välj förklaringen som passar " + entry.word + ":",
+                "Välj förklaringen som passar \u201C" + entry.word + "\u201D:",
                 definitionOptions
             );
             card.append(definitionGroup, definitionFeedback);
@@ -223,7 +295,7 @@
         var posOptions = buildPosOptions(entry);
         var posGroup = createOptionGroup(
             "pos",
-            "Välj vilken ordklass som " + entry.word + " tillhör:",
+            "Välj vilken ordklass som \u201C" + entry.word + "\u201D tillhör:",
             posOptions
         );
         var posFeedback = document.createElement("p");
