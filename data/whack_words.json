@@ -1,0 +1,1606 @@
+{
+  "title": "Banka ordet",
+  "area": "Spel",
+  "lists": [
+    {
+      "label": "Pronomen",
+      "targetClass": "pronoun",
+      "instruction": "Banka alla pronomen.",
+      "rules": [
+        "Ett pronomen står istället för ett namn eller ett substantiv: han, hon, vi, de.",
+        "Några pronomen är: jag, du, han, hon, den, det, vi, ni, de.",
+        "sin, sitt och sina används om det som är ens eget: Han läser sin bok."
+      ],
+      "classes": {
+        "pronoun": {
+          "label": "pronomen",
+          "explanation": "Ett pronomen står istället för ett namn eller ett substantiv: han, hon, vi, de."
+        },
+        "noun": {
+          "label": "substantiv",
+          "explanation": "Ett substantiv är namnet på en sak, en person eller ett djur."
+        },
+        "verb": {
+          "label": "verb",
+          "explanation": "Ett verb säger vad någon gör eller vad som händer."
+        },
+        "adjective": {
+          "label": "adjektiv",
+          "explanation": "Ett adjektiv beskriver ett substantiv, till exempel stor eller glad."
+        }
+      },
+      "words": [
+        {
+          "text": "jag",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "du",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "han",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "hon",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "den",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "det",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "vi",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "ni",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "de",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "man",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "mig",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "dig",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "honom",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "henne",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "oss",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "er",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "dem",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "min",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "mitt",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "din",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "ditt",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "sin",
+          "class": "pronoun",
+          "level": 3,
+          "note": "reflexivt possessiv"
+        },
+        {
+          "text": "sitt",
+          "class": "pronoun",
+          "level": 3,
+          "note": "reflexivt possessiv"
+        },
+        {
+          "text": "sina",
+          "class": "pronoun",
+          "level": 3,
+          "note": "reflexivt possessiv"
+        },
+        {
+          "text": "hennes",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "deras",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "vår",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "hund",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "bok",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "hus",
+          "class": "noun",
+          "level": 1,
+          "note": "ett-ord"
+        },
+        {
+          "text": "flicka",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "springer",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "läser",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "sover",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "äter",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "glad",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "stor",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "röd",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "snabb",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "hunden",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "boken",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "huset",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "flickorna",
+          "class": "noun",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "gick",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "läste",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "sov",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "hoppade",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "stora",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "glada",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "röda",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "barnen",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "tänder",
+          "class": "noun",
+          "level": 3,
+          "note": "oregelbunden plural"
+        },
+        {
+          "text": "fönstren",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "gått",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "varit",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "måste",
+          "class": "verb",
+          "level": 3,
+          "note": "presens"
+        },
+        {
+          "text": "snabbare",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        },
+        {
+          "text": "snabbast",
+          "class": "adjective",
+          "level": 3,
+          "note": "superlativ"
+        },
+        {
+          "text": "bättre",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        }
+      ]
+    },
+    {
+      "label": "Substantiv",
+      "targetClass": "noun",
+      "instruction": "Banka alla substantiv.",
+      "rules": [
+        "Ett substantiv är namnet på en sak, en person eller ett djur: hund, bok, lärare.",
+        "Substantiv är en-ord eller ett-ord: en hund, ett hus.",
+        "Substantiv kan ändra form: en hund, hunden, hundar."
+      ],
+      "classes": {
+        "noun": {
+          "label": "substantiv",
+          "explanation": "Ett substantiv är namnet på en sak, en person eller ett djur: hund, bok, lärare."
+        },
+        "verb": {
+          "label": "verb",
+          "explanation": "Ett verb säger vad någon gör eller vad som händer."
+        },
+        "adjective": {
+          "label": "adjektiv",
+          "explanation": "Ett adjektiv beskriver ett substantiv, till exempel stor eller glad."
+        },
+        "pronoun": {
+          "label": "pronomen",
+          "explanation": "Ett pronomen står istället för ett namn eller ett substantiv: han, hon, vi, de."
+        }
+      },
+      "words": [
+        {
+          "text": "hund",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "katt",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "bok",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "bil",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "äpple",
+          "class": "noun",
+          "level": 1,
+          "note": "ett-ord"
+        },
+        {
+          "text": "vatten",
+          "class": "noun",
+          "level": 1,
+          "note": "ett-ord"
+        },
+        {
+          "text": "hus",
+          "class": "noun",
+          "level": 1,
+          "note": "ett-ord"
+        },
+        {
+          "text": "bord",
+          "class": "noun",
+          "level": 1,
+          "note": "ett-ord"
+        },
+        {
+          "text": "stol",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "flicka",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "pojke",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "skola",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "hunden",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "katten",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "boken",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "bilen",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "huset",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "stolen",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "gatan",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "staden",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "skolan",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "flickorna",
+          "class": "noun",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "pojkarna",
+          "class": "noun",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "böckerna",
+          "class": "noun",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "barn",
+          "class": "noun",
+          "level": 3,
+          "note": "oregelbunden plural"
+        },
+        {
+          "text": "barnen",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "tänder",
+          "class": "noun",
+          "level": 3,
+          "note": "oregelbunden plural"
+        },
+        {
+          "text": "fötter",
+          "class": "noun",
+          "level": 3,
+          "note": "oregelbunden plural"
+        },
+        {
+          "text": "mössen",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "fönster",
+          "class": "noun",
+          "level": 3,
+          "note": "oregelbunden plural"
+        },
+        {
+          "text": "fönstren",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "hästar",
+          "class": "noun",
+          "level": 3,
+          "note": "plural"
+        },
+        {
+          "text": "hästarna",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "blommor",
+          "class": "noun",
+          "level": 3,
+          "note": "plural"
+        },
+        {
+          "text": "blommorna",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "han",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "hon",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "det",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "springer",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "läser",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "sover",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "äter",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "glad",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "stor",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "snabb",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "röd",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "mig",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "honom",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "dem",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "gick",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "läste",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "sov",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "stora",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "glada",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "röda",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "sin",
+          "class": "pronoun",
+          "level": 3,
+          "note": "reflexivt possessiv"
+        },
+        {
+          "text": "deras",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "vår",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "gått",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "varit",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "måste",
+          "class": "verb",
+          "level": 3,
+          "note": "presens"
+        },
+        {
+          "text": "snabbare",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        },
+        {
+          "text": "snabbast",
+          "class": "adjective",
+          "level": 3,
+          "note": "superlativ"
+        },
+        {
+          "text": "bättre",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        }
+      ]
+    },
+    {
+      "label": "Verb",
+      "targetClass": "verb",
+      "instruction": "Banka alla verb.",
+      "rules": [
+        "Ett verb säger vad någon gör eller vad som händer: springer, läser, sover.",
+        "Verb finns i olika former: går, gick, gått.",
+        "Orden är, var, blir och finns är också verb."
+      ],
+      "classes": {
+        "verb": {
+          "label": "verb",
+          "explanation": "Ett verb säger vad någon gör eller vad som händer."
+        },
+        "noun": {
+          "label": "substantiv",
+          "explanation": "Ett substantiv är namnet på en sak, en person eller ett djur."
+        },
+        "adjective": {
+          "label": "adjektiv",
+          "explanation": "Ett adjektiv beskriver ett substantiv, till exempel stor eller glad."
+        },
+        "adverb": {
+          "label": "adverb",
+          "explanation": "Ett adverb säger till exempel när eller hur ofta något händer."
+        },
+        "preposition": {
+          "label": "preposition",
+          "explanation": "En preposition visar till exempel var något är: bakom, mellan."
+        }
+      },
+      "words": [
+        {
+          "text": "springer",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "läser",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "skriver",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "äter",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "sover",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "simmar",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "hoppar",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "dansar",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "ritar",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "sjunger",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "gick",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "kom",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "tog",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "drack",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "sov",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "skrev",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "läste",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "hoppade",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "simmade",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "dansade",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "gått",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "ätit",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "skrivit",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "sprungit",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "varit",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "måste",
+          "class": "verb",
+          "level": 3,
+          "note": "hjälpverb"
+        },
+        {
+          "text": "kunde",
+          "class": "verb",
+          "level": 3,
+          "note": "hjälpverb"
+        },
+        {
+          "text": "blev",
+          "class": "verb",
+          "level": 3,
+          "note": "preteritum"
+        },
+        {
+          "text": "hade",
+          "class": "verb",
+          "level": 3,
+          "note": "preteritum"
+        },
+        {
+          "text": "finns",
+          "class": "verb",
+          "level": 3,
+          "note": "presens"
+        },
+        {
+          "text": "bord",
+          "class": "noun",
+          "level": 1
+        },
+        {
+          "text": "stol",
+          "class": "noun",
+          "level": 1
+        },
+        {
+          "text": "hund",
+          "class": "noun",
+          "level": 1
+        },
+        {
+          "text": "katt",
+          "class": "noun",
+          "level": 1
+        },
+        {
+          "text": "bok",
+          "class": "noun",
+          "level": 1
+        },
+        {
+          "text": "bil",
+          "class": "noun",
+          "level": 1
+        },
+        {
+          "text": "äpple",
+          "class": "noun",
+          "level": 1
+        },
+        {
+          "text": "vatten",
+          "class": "noun",
+          "level": 1
+        },
+        {
+          "text": "glad",
+          "class": "adjective",
+          "level": 1
+        },
+        {
+          "text": "stor",
+          "class": "adjective",
+          "level": 1
+        },
+        {
+          "text": "snabb",
+          "class": "adjective",
+          "level": 1
+        },
+        {
+          "text": "röd",
+          "class": "adjective",
+          "level": 1
+        },
+        {
+          "text": "hunden",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "katten",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "böckerna",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form, plural"
+        },
+        {
+          "text": "huset",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "flickor",
+          "class": "noun",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "pojkarna",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form, plural"
+        },
+        {
+          "text": "stora",
+          "class": "adjective",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "glada",
+          "class": "adjective",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "röda",
+          "class": "adjective",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "bakom",
+          "class": "preposition",
+          "level": 2
+        },
+        {
+          "text": "snabbare",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        },
+        {
+          "text": "vackra",
+          "class": "adjective",
+          "level": 3,
+          "note": "plural"
+        },
+        {
+          "text": "gamla",
+          "class": "adjective",
+          "level": 3,
+          "note": "plural"
+        },
+        {
+          "text": "ibland",
+          "class": "adverb",
+          "level": 3
+        },
+        {
+          "text": "aldrig",
+          "class": "adverb",
+          "level": 3
+        },
+        {
+          "text": "alltid",
+          "class": "adverb",
+          "level": 3
+        },
+        {
+          "text": "mellan",
+          "class": "preposition",
+          "level": 3
+        },
+        {
+          "text": "framför",
+          "class": "preposition",
+          "level": 3
+        },
+        {
+          "text": "fönstren",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd form, plural"
+        },
+        {
+          "text": "barnen",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd form, plural"
+        }
+      ]
+    },
+    {
+      "label": "Adjektiv",
+      "targetClass": "adjective",
+      "instruction": "Banka alla adjektiv.",
+      "rules": [
+        "Ett adjektiv beskriver ett substantiv: en stor hund, en glad katt.",
+        "Adjektiv ändrar form: en röd bil, två röda bilar.",
+        "Adjektiv kan jämföras: snabb, snabbare, snabbast."
+      ],
+      "classes": {
+        "adjective": {
+          "label": "adjektiv",
+          "explanation": "Ett adjektiv beskriver ett substantiv, till exempel stor eller glad."
+        },
+        "noun": {
+          "label": "substantiv",
+          "explanation": "Ett substantiv är namnet på en sak, en person eller ett djur."
+        },
+        "verb": {
+          "label": "verb",
+          "explanation": "Ett verb säger vad någon gör eller vad som händer."
+        },
+        "pronoun": {
+          "label": "pronomen",
+          "explanation": "Ett pronomen står istället för ett namn eller ett substantiv: han, hon, vi, de."
+        }
+      },
+      "words": [
+        {
+          "text": "glad",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "stor",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "snabb",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "röd",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "lång",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "kort",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "fin",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "ny",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "gammal",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "liten",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "trött",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "stark",
+          "class": "adjective",
+          "level": 1,
+          "note": "grundform"
+        },
+        {
+          "text": "stora",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "glada",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "röda",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "gamla",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "nya",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "fina",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "små",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "trötta",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "långa",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "korta",
+          "class": "adjective",
+          "level": 2,
+          "note": "böjd form"
+        },
+        {
+          "text": "snabbare",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        },
+        {
+          "text": "snabbast",
+          "class": "adjective",
+          "level": 3,
+          "note": "superlativ"
+        },
+        {
+          "text": "större",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        },
+        {
+          "text": "störst",
+          "class": "adjective",
+          "level": 3,
+          "note": "superlativ"
+        },
+        {
+          "text": "äldre",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        },
+        {
+          "text": "äldst",
+          "class": "adjective",
+          "level": 3,
+          "note": "superlativ"
+        },
+        {
+          "text": "bättre",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        },
+        {
+          "text": "bäst",
+          "class": "adjective",
+          "level": 3,
+          "note": "superlativ"
+        },
+        {
+          "text": "vackrare",
+          "class": "adjective",
+          "level": 3,
+          "note": "komparativ"
+        },
+        {
+          "text": "vackrast",
+          "class": "adjective",
+          "level": 3,
+          "note": "superlativ"
+        },
+        {
+          "text": "hund",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "bok",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "hus",
+          "class": "noun",
+          "level": 1,
+          "note": "ett-ord"
+        },
+        {
+          "text": "flicka",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "bil",
+          "class": "noun",
+          "level": 1,
+          "note": "en-ord"
+        },
+        {
+          "text": "springer",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "läser",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "sover",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "äter",
+          "class": "verb",
+          "level": 1,
+          "note": "presens"
+        },
+        {
+          "text": "han",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "hon",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "det",
+          "class": "pronoun",
+          "level": 1,
+          "note": "subjektsform"
+        },
+        {
+          "text": "hunden",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "boken",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "huset",
+          "class": "noun",
+          "level": 2,
+          "note": "bestämd form"
+        },
+        {
+          "text": "flickorna",
+          "class": "noun",
+          "level": 2,
+          "note": "plural"
+        },
+        {
+          "text": "gick",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "läste",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "sov",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "hoppade",
+          "class": "verb",
+          "level": 2,
+          "note": "preteritum"
+        },
+        {
+          "text": "mig",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "honom",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "dem",
+          "class": "pronoun",
+          "level": 2,
+          "note": "objektsform"
+        },
+        {
+          "text": "barnen",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "tänder",
+          "class": "noun",
+          "level": 3,
+          "note": "oregelbunden plural"
+        },
+        {
+          "text": "fönstren",
+          "class": "noun",
+          "level": 3,
+          "note": "bestämd plural"
+        },
+        {
+          "text": "gått",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "varit",
+          "class": "verb",
+          "level": 3,
+          "note": "supinum"
+        },
+        {
+          "text": "måste",
+          "class": "verb",
+          "level": 3,
+          "note": "presens"
+        },
+        {
+          "text": "sin",
+          "class": "pronoun",
+          "level": 3,
+          "note": "reflexivt possessiv"
+        },
+        {
+          "text": "deras",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        },
+        {
+          "text": "vår",
+          "class": "pronoun",
+          "level": 3,
+          "note": "possessiv"
+        }
+      ]
+    }
+  ]
+}
