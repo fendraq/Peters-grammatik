@@ -189,6 +189,69 @@
         element.textContent = text;
     }
 
+    function isWordCharacter(character) {
+        return character !== "" && /[0-9A-Za-zÀ-ÿ]/.test(character);
+    }
+
+    // Find "form" in "sentence" as a whole word, not inside a longer word.
+    // Returns the index of the first match, or -1.
+    function findWholeWord(sentence, form) {
+        var lower = sentence.toLocaleLowerCase("sv");
+        var target = form.toLocaleLowerCase("sv");
+        var index = lower.indexOf(target);
+        while (index !== -1) {
+            var before = index === 0 ? "" : sentence.charAt(index - 1);
+            var after = index + target.length >= sentence.length ? "" : sentence.charAt(index + target.length);
+            if (!isWordCharacter(before) && !isWordCharacter(after)) {
+                return index;
+            }
+            index = lower.indexOf(target, index + 1);
+        }
+        return -1;
+    }
+
+    // All known word forms of the exercise word (base form, inflections and
+    // index forms from the lexicon), so "kryptera" also matches
+    // "krypterade" in an example sentence.
+    function collectWordForms(entry, lexicon) {
+        var forms = [entry.word];
+        var add = function (form) {
+            if (form && form.length >= 3 && !/[:\s]/.test(form) && forms.indexOf(form) === -1) {
+                forms.push(form);
+            }
+        };
+        lexicon.forEach(function (lexEntry) {
+            var isMatch = lexEntry.word === entry.word ||
+                (lexEntry.idx && lexEntry.idx.indexOf(entry.word) !== -1);
+            if (isMatch) {
+                (lexEntry.infl || []).forEach(add);
+                (lexEntry.idx || []).forEach(add);
+            }
+        });
+        // Longest form first: "krypterade" should win over "kryptera".
+        forms.sort(function (a, b) { return b.length - a.length; });
+        return forms;
+    }
+
+    // Put citation quotes around the exercise word inside the example
+    // sentence, so the student can tell it apart from the rest of the text.
+    function markWordInExample(entry, lexicon) {
+        var sentence = String(entry.example || "");
+        if (!lexicon || !sentence) {
+            return sentence;
+        }
+        var forms = collectWordForms(entry, lexicon);
+        for (var i = 0; i < forms.length; i++) {
+            var index = findWholeWord(sentence, forms[i]);
+            if (index !== -1) {
+                return sentence.slice(0, index) + "\u201C" +
+                    sentence.slice(index, index + forms[i].length) + "\u201D" +
+                    sentence.slice(index + forms[i].length);
+            }
+        }
+        return sentence;
+    }
+
     function createWordCard(container, entry, lexicon, options) {
         var card = document.createElement("section");
         card.className = "word-card";
@@ -199,7 +262,7 @@
         card.appendChild(headline);
 
         var example = document.createElement("blockquote");
-        example.textContent = "\u201C" + entry.example + "\u201D";
+        example.textContent = markWordInExample(entry, lexicon);
         card.appendChild(example);
 
         var definitionOptions = lexicon ? buildDefinitionOptions(entry, lexicon) : null;
