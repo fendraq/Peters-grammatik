@@ -3,9 +3,10 @@
 
     // Teacher area, hidden behind a small hover link in the header.
     // Login: username + password hash from js/admin-config.json.
-    // "Lägg till nytt ord" looks the word up in data/lexicon.json
-    // and commits the updated word list to GitHub with the
-    // Contents API, using a fine-grained personal access token
+    // "Lägg till nytt ord" looks the word up in data/lexicon.json.
+    // Approved words are collected in a queue (saved in the browser),
+    // listed next to the form, and sent to GitHub in one single commit
+    // with the Contents API, using a fine-grained personal access token
     // (Contents: Read and write, this repository only).
 
     var REPO_OWNER = "fendraq";
@@ -14,6 +15,7 @@
     var LEXICON_PATH = "data/lexicon.json";
     var CONFIG_PATH = "js/admin-config.json";
     var PAT_STORAGE_KEY = "github_pat";
+    var QUEUE_STORAGE_KEY = "word_queue";
 
     var POS_LABELS = {
         "subst.": "substantiv",
@@ -31,6 +33,7 @@
 
     var loggedIn = false;
     var lexiconPromise = null;
+    var queue = loadQueue();
 
     function fetchJson(path) {
         return fetch(path).then(function (response) {
@@ -77,6 +80,40 @@
         } catch (error) {
             // Storage may be unavailable; the token works this session only.
         }
+    }
+
+    // ----- Queue of approved words, saved in the browser -----
+
+    function loadQueue() {
+        try {
+            var raw = localStorage.getItem(QUEUE_STORAGE_KEY);
+            var items = raw ? JSON.parse(raw) : [];
+            return Array.isArray(items) ? items : [];
+        } catch (error) {
+            return [];
+        }
+    }
+
+    function saveQueue() {
+        try {
+            localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
+        } catch (error) {
+            // Storage may be unavailable; the queue lives in the page only.
+        }
+    }
+
+    function queueHasWord(form) {
+        var normalized = normalizeForm(form);
+        return queue.some(function (entry) {
+            return normalizeForm(entry.word) === normalized;
+        });
+    }
+
+    function removeFromQueue(entries) {
+        queue = queue.filter(function (entry) {
+            return entries.indexOf(entry) === -1;
+        });
+        saveQueue();
     }
 
     function sha256Hex(text) {
@@ -243,6 +280,15 @@
         var resultArea = document.createElement("div");
         resultArea.className = "admin-result";
 
+        function onWordAdded() {
+            renderQueue();
+            resultArea.replaceChildren(
+                createMessage("correct", "Ordet ligger i kön till höger. Lägg till fler ord eller skicka kön till ordlistan.")
+            );
+            searchField.value = "";
+            searchField.focus();
+        }
+
         searchButton.addEventListener("click", function () {
             var form = searchField.value.trim();
             if (!form) {
@@ -262,13 +308,19 @@
                     );
                     return;
                 }
+                if (queueHasWord(form)) {
+                    resultArea.replaceChildren(
+                        createMessage("wrong", "Ordet ligger redan i kön.")
+                    );
+                    return;
+                }
                 var matches = findExactMatches(lexicon, form);
                 if (matches.length === 1) {
-                    renderWordForm(resultArea, form, matches[0]);
+                    renderWordForm(resultArea, form, matches[0], onWordAdded);
                 } else if (matches.length > 1) {
-                    renderSenseChoice(resultArea, form, matches);
+                    renderSenseChoice(resultArea, form, matches, onWordAdded);
                 } else {
-                    renderSuggestions(resultArea, form, lexicon);
+                    renderSuggestions(resultArea, form, lexicon, onWordAdded);
                 }
             }).catch(function () {
                 resultArea.replaceChildren(
@@ -277,11 +329,104 @@
             });
         });
 
-        content.append(
+        var formColumn = document.createElement("div");
+        formColumn.append(
             createLabeledField("Ord (grundform)", searchField),
             searchButton,
             resultArea
         );
+
+        var queueColumn = document.createElement("aside");
+        queueColumn.className = "admin-queue";
+        var queueHeading = document.createElement("h3");
+        queueHeading.textContent = "Tillagda ord";
+        var queueCount = document.createElement("p");
+        queueCount.className = "hint";
+        var queueList = document.createElement("div");
+
+        var sendFeedback = document.createElement("p");
+        var sendButton = document.createElement("button");
+        sendButton.type = "button";
+        sendButton.textContent = "Skicka ord till ordlistan";
+        sendButton.disabled = true;
+
+        var queueHint = document.createElement("p");
+        queueHint.className = "hint";
+        queueHint.textContent = "Alla ord i kön skickas i en enda commit. Kön sparas i webbläsaren " +
+            "tills du skickar den.";
+
+        function renderQueue() {
+            queueList.replaceChildren();
+            queueCount.textContent = queue.length === 0
+                ? "Inga ord i kön än. Sök ett ord och klicka 'Lägg till ord'."
+                : queue.length + (queue.length === 1 ? " ord väntar" : " ord väntar") + " på att skickas.";
+            queue.forEach(function (entry, index) {
+                var item = document.createElement("div");
+                item.className = "admin-queue-item";
+                var label = document.createElement("span");
+                label.textContent = entry.word + " (" + (POS_LABELS[entry.pos] || entry.pos) + ")";
+                var removeButton = document.createElement("button");
+                removeButton.type = "button";
+                removeButton.textContent = "Ta bort";
+                removeButton.setAttribute("aria-label", "Ta bort ordet " + entry.word);
+                removeButton.addEventListener("click", function () {
+                    queue.splice(index, 1);
+                    saveQueue();
+                    renderQueue();
+                });
+                item.append(label, removeButton);
+                queueList.appendChild(item);
+            });
+            if (!sendButton.dataset.sending) {
+                sendButton.disabled = queue.length === 0;
+            }
+        }
+
+        sendButton.addEventListener("click", function () {
+            var pending = queue.slice();
+            if (pending.length === 0) {
+                return;
+            }
+            sendButton.dataset.sending = "true";
+            sendButton.disabled = true;
+            sendFeedback.className = "feedback";
+            sendFeedback.textContent = "Skickar " + pending.length + " ord till repot...";
+            commitWords(pending).then(function (result) {
+                removeFromQueue(result.added.concat(result.skipped));
+                sendFeedback.className = "feedback correct";
+                var text = result.added.length === 1
+                    ? "1 ord tillagt i ordlistan."
+                    : result.added.length + " ord tillagda i ordlistan.";
+                text += " Det syns på sidan om en liten stund.";
+                if (result.skipped.length > 0) {
+                    text += " Hoppade över (fanns redan i ordlistan): " +
+                        result.skipped.map(function (entry) { return entry.word; }).join(", ") + ".";
+                }
+                sendFeedback.textContent = text;
+            }).catch(function (error) {
+                sendFeedback.className = "feedback wrong";
+                sendFeedback.textContent = "Kunde inte spara: " + error.message;
+            }).then(function () {
+                delete sendButton.dataset.sending;
+                renderQueue();
+            });
+        });
+
+        queueColumn.append(
+            queueHeading,
+            queueCount,
+            queueList,
+            sendButton,
+            sendFeedback,
+            queueHint
+        );
+
+        var layout = document.createElement("div");
+        layout.className = "admin-layout";
+        layout.append(formColumn, queueColumn);
+        content.appendChild(layout);
+
+        renderQueue();
 
         var patHeading = document.createElement("h3");
         patHeading.textContent = "GitHub-token";
@@ -307,7 +452,7 @@
         content.append(patHeading, patField, patSave, patFeedback, patHint);
     }
 
-    function renderSenseChoice(area, form, matches) {
+    function renderSenseChoice(area, form, matches, onAdded) {
         area.replaceChildren();
         area.appendChild(createMessage("", "Ordet har flera betydelser. Vilken betydelse avser du?"));
         matches.forEach(function (entry) {
@@ -317,17 +462,17 @@
             var definition = entry.defs[0] || "(ingen förklaring)";
             button.textContent = entry.word + " – " + definition;
             button.addEventListener("click", function () {
-                renderWordForm(area, form, entry);
+                renderWordForm(area, form, entry, onAdded);
             });
             area.appendChild(button);
         });
     }
 
-    function renderSuggestions(area, form, lexicon) {
+    function renderSuggestions(area, form, lexicon, onAdded) {
         var suggestions = findPrefixSuggestions(lexicon, form);
         if (suggestions.length === 0) {
             area.replaceChildren();
-            renderWordForm(area, form, null);
+            renderWordForm(area, form, null, onAdded);
             return;
         }
         area.replaceChildren();
@@ -338,7 +483,7 @@
             button.className = "admin-choice";
             button.textContent = suggestion.form;
             button.addEventListener("click", function () {
-                renderWordForm(area, suggestion.form, suggestion.entry);
+                renderWordForm(area, suggestion.form, suggestion.entry, onAdded);
             });
             area.appendChild(button);
         });
@@ -346,12 +491,12 @@
         manual.type = "button";
         manual.textContent = "Nej, jag fyller i allt själv";
         manual.addEventListener("click", function () {
-            renderWordForm(area, form, null);
+            renderWordForm(area, form, null, onAdded);
         });
         area.appendChild(manual);
     }
 
-    function renderWordForm(area, form, entry) {
+    function renderWordForm(area, form, entry, onAdded) {
         area.replaceChildren();
         var info = document.createElement("p");
         info.className = "hint";
@@ -400,10 +545,10 @@
 
         var addButton = document.createElement("button");
         addButton.type = "button";
-        addButton.textContent = "Lägg till ord i ordlistan";
+        addButton.textContent = "Lägg till ord";
         addButton.disabled = true;
 
-        var commitFeedback = document.createElement("p");
+        var addFeedback = document.createElement("p");
 
         function updateEnabled() {
             addButton.disabled = !(
@@ -420,22 +565,23 @@
         updateEnabled();
 
         addButton.addEventListener("click", function () {
-            addButton.disabled = true;
-            commitFeedback.className = "feedback";
-            commitFeedback.textContent = "Sparar ordet i repot...";
-            commitWord({
+            var wordEntry = {
                 word: wordField.value.trim(),
                 example: exampleField.value.trim(),
                 definition: definitionField.value.trim(),
                 pos: posSelect.value
-            }).then(function () {
-                commitFeedback.className = "feedback correct";
-                commitFeedback.textContent = "Ordet tillagt i ordlistan. Det syns på sidan om en liten stund.";
-            }).catch(function (error) {
-                addButton.disabled = false;
-                commitFeedback.className = "feedback wrong";
-                commitFeedback.textContent = "Kunde inte spara: " + error.message;
-            });
+            };
+            if (queueHasWord(wordEntry.word)) {
+                addFeedback.className = "feedback wrong";
+                addFeedback.textContent = "Ordet ligger redan i kön.";
+                return;
+            }
+            queue.push(wordEntry);
+            saveQueue();
+            addFeedback.textContent = "";
+            if (onAdded) {
+                onAdded(wordEntry);
+            }
         });
 
         if (entry) {
@@ -449,16 +595,22 @@
             definitionMissing ? missingHint("Förklaring saknas i lexikonet. Skriv en själv.") : null,
             createLabeledField("Ordklass", posSelect),
             addButton,
-            commitFeedback
+            addFeedback
         );
     }
 
-    // ----- Commit to GitHub -----
+    // ----- Commit to GitHub (one commit for every queued word) -----
 
-    function commitWord(wordEntry) {
+    // Adds all entries to data/ordforstaelse.json in a single commit.
+    // Entries that already exist in the word list are skipped and
+    // reported. Resolves with { added: [...], skipped: [...] }.
+    function commitWords(entries) {
         var token = getPat();
         if (!token) {
-            return Promise.reject(new Error("Ingen GitHub-token är sparad. Fyll i en token ovan."));
+            return Promise.reject(new Error("Ingen GitHub-token är sparad. Fyll i token nedan."));
+        }
+        if (entries.length === 0) {
+            return Promise.resolve({ added: [], skipped: [] });
         }
         var apiUrl = "https://api.github.com/repos/" + REPO_OWNER + "/" + REPO_NAME +
             "/contents/" + WORD_LIST_PATH + "?ref=main";
@@ -477,9 +629,26 @@
                 return raw.json();
             }).then(function (wordList) {
                 wordList.words = wordList.words || [];
-                wordList.words.push(wordEntry);
+                var added = [];
+                var skipped = [];
+                entries.forEach(function (entry) {
+                    if (findExistingWord(wordList, entry.word)) {
+                        skipped.push(entry);
+                    } else {
+                        wordList.words.push(entry);
+                        added.push(entry);
+                    }
+                });
+                if (added.length === 0) {
+                    return { added: added, skipped: skipped };
+                }
+                var words = added.map(function (entry) { return entry.word; });
+                if (words.length > 10) {
+                    words = words.slice(0, 10);
+                    words.push("+" + (added.length - 10) + " ord till");
+                }
                 var body = {
-                    message: "Add word: " + wordEntry.word,
+                    message: "Add " + added.length + (added.length === 1 ? " word: " : " words: ") + words.join(", "),
                     content: utf8ToBase64(JSON.stringify(wordList, null, 2)),
                     sha: fileInfo.sha,
                     branch: "main"
@@ -488,14 +657,14 @@
                     method: "PUT",
                     headers: headers,
                     body: JSON.stringify(body)
+                }).then(function (response) {
+                    if (response.ok) {
+                        return { added: added, skipped: skipped };
+                    }
+                    return response.json().then(function (error) {
+                        throw new Error(error.message || ("HTTP " + response.status));
+                    });
                 });
-            });
-        }).then(function (response) {
-            if (response.ok) {
-                return null;
-            }
-            return response.json().then(function (error) {
-                throw new Error(error.message || ("HTTP " + response.status));
             });
         });
     }
