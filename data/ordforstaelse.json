@@ -60,6 +60,12 @@
       "example": "landets ekonomiska situation är besvärlig",
       "definition": "läge, tillstånd",
       "pos": "subst."
+    },
+    {
+      "word": "ana",
+      "example": "de hade inte hört något från dottern på en vecka och anade det värsta",
+      "definition": "gissar, föreställer sig",
+      "pos": "verb"
     }
   ]
 }
