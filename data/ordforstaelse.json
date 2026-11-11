@@ -66,6 +66,144 @@
       "example": "de hade inte hört något från dottern på en vecka och anade det värsta",
       "definition": "gissar, föreställer sig",
       "pos": "verb"
+    },
+    {
+      "word": "mekanisk",
+      "example": "en mekanisk verkstad",
+      "definition": "maskin-, maskinell",
+      "pos": "adj."
+    },
+    {
+      "word": "skandal",
+      "example": "det blev skandal när skådespelarna vägrade samarbeta med regissören",
+      "definition": "något som väcker stor förargelse",
+      "pos": "subst."
+    },
+    {
+      "word": "ritning",
+      "example": "ritningar till en ny hustyp",
+      "definition": "ritad plan (t.ex. för konstruktion av hus)",
+      "pos": "subst."
+    },
+    {
+      "word": "kupé",
+      "example": "flera personer kunde sitta i kupén",
+      "definition": "sluten avdelning i en järnvägsvagn (ofta för ungefär sex personer)",
+      "pos": "subst."
+    },
+    {
+      "word": "klipsk",
+      "example": "Det var en klipsk lösning på problemet.",
+      "definition": "klartänkt, uppfinningsrik, intelligent",
+      "pos": "adj."
+    },
+    {
+      "word": "krage",
+      "example": "Hon fällde upp kragen, för att motverka vinden.",
+      "definition": "styv, vikt del av en skjorta e.d. närmast halsen",
+      "pos": "subst."
+    },
+    {
+      "word": "tema",
+      "example": "konferensens tema var klimatförändringarna",
+      "definition": "ämne, (viktigaste) fråga",
+      "pos": "subst."
+    },
+    {
+      "word": "budskap",
+      "example": "en låt med ett politiskt budskap",
+      "definition": "meddelande, underrättelse; innehåll",
+      "pos": "subst."
+    },
+    {
+      "word": "symbol",
+      "example": "matematiska symboler som + och –",
+      "definition": "tecken med en särskild innebörd",
+      "pos": "subst."
+    },
+    {
+      "word": "vändpunkt",
+      "example": "bytet av jobb blev en vändpunkt i hennes liv",
+      "definition": "punkt (i tiden) där något får en ny inriktning",
+      "pos": "subst."
+    },
+    {
+      "word": "konflikt",
+      "example": "han råkade i konflikt med sin chef",
+      "definition": "svår motsättning, tvist; krig",
+      "pos": "subst."
+    },
+    {
+      "word": "slinka",
+      "example": "de slank in på en mysig restaurang",
+      "definition": "smiter; går",
+      "pos": "verb"
+    },
+    {
+      "word": "gnissla",
+      "example": "gångjärnen gnisslar, de måste smörjas",
+      "definition": "ger ifrån sig ett skarpt och skärande ljud",
+      "pos": "verb"
+    },
+    {
+      "word": "huka",
+      "example": "hukade under grenarna, för att inte slå i huvudet.",
+      "definition": "hukar sig",
+      "pos": "verb"
+    },
+    {
+      "word": "rasande",
+      "example": "han blev rasande när han fick en varning",
+      "definition": "mycket arg",
+      "pos": "adj."
+    },
+    {
+      "word": "harkla sig",
+      "example": "socialministern harklade sig innan hon besvarade frågan",
+      "definition": "försöker göra strupen ren (med ett gurglande ljud)",
+      "pos": "verb"
+    },
+    {
+      "word": "hisna",
+      "example": "barnen hisnade när de åkte berg- och dalbanan",
+      "definition": "får svindel, känner sig yr",
+      "pos": "verb"
+    },
+    {
+      "word": "kränga",
+      "example": "båten krängde i den hårda vinden",
+      "definition": "svänger hit och dit, lutar",
+      "pos": "verb"
+    },
+    {
+      "word": "knall",
+      "example": "raketen exploderade med en knall",
+      "definition": "kraftigt smällande ljud",
+      "pos": "subst."
+    },
+    {
+      "word": "sällsynt",
+      "example": "sällsynta franska viner",
+      "definition": "som man sällan ser, ovanlig",
+      "pos": "adj."
+    },
+    {
+      "word": "ört",
+      "example": "en trädgård full med örter",
+      "definition": "växt som vissnar ner varje år, planta, blomma",
+      "pos": "subst."
+    },
+    {
+      "word": "snegla",
+      "example": "hon var uttråkad av föreläsningen och sneglade på klockan",
+      "definition": "tittar (i smyg) från sidan",
+      "pos": "verb"
+    },
+    {
+      "word": "vimmelkantig",
+      "example": "barnen blev alldeles vimmelkantiga av karusellfärden",
+      "definition": "yr, förvirrad",
+      "pos": "adj."
     }
   ]
 }
