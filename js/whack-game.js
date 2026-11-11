@@ -525,6 +525,13 @@
             result.replaceChildren();
             updateHud();
             setPhase("playing");
+            // The title, rules and score bar can leave the arena far
+            // down the page. Scroll so the score bar and the arena sit
+            // at the top of the window and the player sees the game
+            // directly when it starts.
+            if (hud.scrollIntoView) {
+                hud.scrollIntoView({ block: "start" });
+            }
             startLoop();
         }
 
