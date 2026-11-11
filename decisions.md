@@ -116,3 +116,9 @@
 - **Motivering:** En commit per ord spammade git-historiken när läraren lägger in flera ord åt gången, och arbetsflödet skulle vara smidigare med en samling av godkända ord som skickas tillsammans.
 - **Alternativ:** Redigering av ord direkt i kön (bort valt: enklare att ta bort och lägga till igen); kö enbart i minnet (bort valt: arbetet riskerar försvinna vid omladdning).
 - **Status:** Gäller
+
+## 2026-11-11 – "Veckans ord" byter namn till "Dagens ord"
+- **Beslut:** Alla förekomster av "Veckans ord" döps om till "Dagens ord" (UI-rubrik, README, kodkommentar).
+- **Motivering:** Ordet byts dagligen, inte veckovis, så namnet ska motsvara det.
+- **Alternativ:** Behålla "Veckans ord".
+- **Status:** Gäller

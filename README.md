@@ -30,9 +30,9 @@ Spelet ligger under menyposten **Spel** (inte under något grammatikområde).
   - `words` – ord med `text`, `class` (id från `classes`), `level` (1–3, valfritt, standard 1) och `note` (valfri, till exempel "preteritum"). Minst 5 rätta och 5 fel ord behövs per lista. Använd bara ord som tydligt tillhör en ordklass.
 - En ny ordklass läggs till som ett nytt objekt i `lists`. Ingen kodändring behövs.
 
-## Ordförståelse: "Veckans ord" och "Öva ordförståelse"
+## Ordförståelse: "Dagens ord" och "Öva ordförståelse"
 
-- **Veckans ord** visas centrerat på startsidan: ett ord per dag, samma ord för alla elever hela dagen (ordet väljs utifrån dagens datum, ingen server behövs).
+- **Dagens ord** visas centrerat på startsidan: ett ord per dag, samma ord för alla elever hela dagen (ordet väljs utifrån dagens datum, ingen server behövs).
 - **Öva ordförståelse** ligger i vänstermenyn och ger ett nytt ord så snart eleven har klarat ett.
 - Varje ord visas med en exempelmening och två frågor: "Välj förklaringen som passar ORDET" (fyra alternativ, ett rätt) och "Välj vilken ordklass som ORDET tillhör" (fyra alternativ). De felaktiga alternativen och deras plats slumpas fram på nytt vid varje visning, så inget kan memoreras.
 - Ordet räknas som avklarat när eleven svarat rätt på båda frågorna. Fel svar visar rätt svar och eleven får försöka igen.
@@ -67,7 +67,7 @@ Spelet ligger under menyposten **Spel** (inte under något grammatikområde).
 | `index.html` | Sidan |
 | `css/style.css` | Utseende |
 | `js/app.js` | Kod för menyn och övningarna |
-| `js/word-exercise.js` | Kod för "Veckans ord" och "Öva ordförståelse" |
+| `js/word-exercise.js` | Kod för "Dagens ord" och "Öva ordförståelse" |
 | `js/admin.js` | Kod för lärarinloggning och "Lägg till nytt ord" |
 | `js/admin-config.json` | Användarnamn och lösenordshash för lärarinloggningen |
 | `js/whack-game.js` | Kod för spelet "Banka ordet" |

@@ -2,7 +2,7 @@
     "use strict";
 
     // Exercise type "word-comprehension": one word per session.
-    // "Veckans ord" (daily word) is deterministic from the date,
+    // "Dagens ord" (daily word) is deterministic from the date,
     // "Öva ordförståelse" (practice) picks a random word the student
     // has not done yet. Wrong options (definitions and word classes)
     // are picked fresh from data/lexicon.json on every render.
@@ -410,7 +410,7 @@
             loadLexicon().catch(function () { return null; }).then(function (lexicon) {
                 container.replaceChildren();
                 var heading = document.createElement("h2");
-                heading.textContent = "Veckans ord";
+                heading.textContent = "Dagens ord";
                 container.appendChild(heading);
                 var intro = createMessage(
                     "Ett nytt ord varje dag. Läs meningen och svara på de två frågorna."
