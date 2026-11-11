@@ -411,6 +411,51 @@ main button:disabled {
     margin-bottom: 0.5rem;
 }
 
+/* Two columns on wide screens: the form on the left, the queue of
+   approved words on the right. Stacks on narrow screens. */
+.admin-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 22rem);
+    gap: 2rem;
+    align-items: start;
+    margin: 1rem 0;
+}
+
+.admin-layout > aside {
+    border: 1px solid #888;
+    border-radius: 8px;
+    background: #111;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.admin-queue h3 {
+    margin: 0.25rem 0 0.25rem;
+}
+
+.admin-queue-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #444;
+}
+
+.admin-queue-item:last-child {
+    border-bottom: none;
+}
+
+.admin-queue-item button {
+    flex: none;
+}
+
+@media (max-width: 55rem) {
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ----- Game "Slå rätt ord" ----- */
 
 .game-instruction {

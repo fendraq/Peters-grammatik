@@ -110,3 +110,9 @@
 - **Motivering:** Övningen var otydlig: meningen var oklar och eleven fick ingen ledning om vad som skulle skrivas i rutan. Läraren ville ha en sammanhängande text, tips per lucka och fler godtagbara svar på avslutningsordet.
 - **Alternativ:** Tipsen hade kunnat stå i parentes direkt i meningen (bort valt: användaren ville ha en förklaringssymbol), och luckmeningarna hade kunnat vara kvar i slumpad ordning (bort valt: de ska läsas som en text).
 - **Status:** Gäller
+
+## 2026-11-04 – Admin: ord köas och skickas i en enda commit
+- **Beslut:** "Lägg till nytt ord" i lärarvyn arbetar nu med en kö. Knappen "Lägg till ord i ordlistan" heter "Lägg till ord" och lägger ordet i en kö som listas till höger om formuläret (två kolumner på bred skärm, staplade på mobil). Sökrutan rensas och får fokus igen efter varje ord. Ord i kön kan bara tas bort ("Ta bort"), inte redigeras. Kön sparas i webbläsarens localStorage tills den skickas. Knappen "Skicka ord till ordlistan" under kön skickar alla ord i **en enda commit** till main ("Add 3 words: ...") i stället för en commit per ord. Dubletter stoppas både vid sök (mot ordlistan och kön) och vid sändning (ord som lagts till av någon annan under tiden hoppas över och rapporteras; sker ingen PUT om inga nya ord finns).
+- **Motivering:** En commit per ord spammade git-historiken när läraren lägger in flera ord åt gången, och arbetsflödet skulle vara smidigare med en samling av godkända ord som skickas tillsammans.
+- **Alternativ:** Redigering av ord direkt i kön (bort valt: enklare att ta bort och lägga till igen); kö enbart i minnet (bort valt: arbetet riskerar försvinna vid omladdning).
+- **Status:** Gäller

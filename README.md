@@ -43,9 +43,10 @@ Spelet ligger under menyposten **Spel** (inte under något grammatikområde).
 ### Lägga till ord (lärare)
 
 1. Hovra över "Admin" högst upp till höger på sidan och klicka. Logga in med användarnamn och lösenord (HASHEN av lösenordet ligger i `js/admin-config.json`; byt lösenord genom att skapa en ny SHA-256-hash och ersätta värdet).
-2. Skriv ordet (grundform, till exempel "kryptera") och klicka "Slå upp". Sidan kollar om ordet redan finns, hämtar data ur LEXIN och förifyller fälten. Fält som saknas i LEXIN fylls i manuellt.
-3. Skapa en gång en fine-grained GitHub-token (github.com → Settings → Developer settings → Fine-grained tokens) med behörigheten **Contents: Read and write**, **endast för det här repot**, och klistra in den under "GitHub-token". Token sparas i lärarens webbläsare, aldrig i repot.
-4. Klicka "Lägg till ord i ordlistan". Ordet committas direkt till `main` och syns på sidan om en liten stund.
+2. Skriv ordet (grundform, till exempel "kryptera") och klicka "Slå upp". Sidan kollar om ordet redan finns (i ordlistan eller i kön), hämtar data ur LEXIN och förifyller fälten. Fält som saknas i LEXIN fylls i manuellt.
+3. Klicka "Lägg till ord". Ordet hamnar i kön till höger om formuläret. Sökrutan rensas så att nästa ord kan slås upp direkt. Ord i kön kan tas bort med "Ta bort". Kön sparas i webbläsaren tills den skickas.
+4. Skapa en gång en fine-grained GitHub-token (github.com → Settings → Developer settings → Fine-grained tokens) med behörigheten **Contents: Read and write**, **endast för det här repot**, och klistra in den under "GitHub-token". Token sparas i lärarens webbläsare, aldrig i repot.
+5. Klicka "Skicka ord till ordlistan" under kön. Alla ord i kön committas till `main` i **en enda commit** och syns på sidan om en liten stund. Ord som någon annan hann lägga till under tiden hoppas över och rapporteras.
 
 ## Så fungerar sidan
 
